@@ -5,9 +5,7 @@ title: About
 
 <img src="portrait.jpg" class="profile-picture" width="128" align="right">
 
-# Copy & Paste Bio
-Kyle is a iOS & Software Engineer at Strava - the social network for athletes. He graduated from the University of Rochester with a degree in Computer Science and Psychology.
-
+Kyle is a iOS & Software Engineer at Strava. He graduated from the University of Rochester with a degree in Computer Science and Psychology.
 
 # Extended Bio
 With the announcement of the App Store 2008, I started learning Objective-C and published my first series of iOS apps in 2011 when I was 16 years old.
