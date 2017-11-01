@@ -1,0 +1,14 @@
+<svg width="164" height="119" viewBox="0 0 164 119" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>absent-logo</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-973 -1053)" figma:type="canvas">
+<g id="absent-logo" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="Vector (Stroke)" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path0_fill" transform="translate(974.498 1053.5)" fill="#222222" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 123.216 0C 126.381 0 129.205 1.98625 130.275 4.96446L 160.942 90.3354C 162.342 94.2337 160.317 98.529 156.419 99.9294C 152.521 101.33 148.225 99.3048 146.825 95.4065L 123.216 29.6846L 93.2746 113.036C 92.2022 116.021 89.3675 118.009 86.1953 118C 83.0231 117.991 80.1996 115.987 79.1438 112.996L 62.2162 65.0347L 45.2887 112.996C 44.2329 115.987 41.4093 117.991 38.2371 118C 35.0649 118.009 32.2303 116.021 31.1578 113.036L 0.443642 27.5339C -0.956699 23.6357 1.06825 19.3403 4.9665 17.94C 8.86475 16.5396 13.1601 18.5646 14.5604 22.4628L 38.1539 88.1419L 55.1438 40.0038C 56.2021 37.0053 59.0364 35 62.2162 35C 65.3961 35 68.2303 37.0053 69.2887 40.0038L 86.2785 88.1419L 116.158 4.96446C 117.228 1.98625 120.052 0 123.216 0Z"/>
+</defs>
+</svg>
