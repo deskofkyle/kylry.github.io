@@ -14,6 +14,6 @@ With the announcement of the App Store 2008, I started learning Objective-C and 
 
 Currently, I study Computer Science and Psychology under the Hajim School of Engineering & Applied Sciences at the University of Rochester. I will complete a double-major degree this year in December 2017.
 
-This summer, I was a software engineer intern at Strava – the social network for athletes. I was a teaching assistant for University of Rochester’s first iOS Swift course in 2016. In 2014, I worked at Instapaper where I helped ship Instapaper 6.0 Instapaper was acquired by Pinterest last year.
+This summer, I was a software engineer intern at Strava – the social network for athletes. I was a teaching assistant for University of Rochester’s first iOS Swift course in 2016. In 2014, I worked at Instapaper where I helped ship Instapaper 6.0. Instapaper was acquired by Pinterest last year.
 
 I respond to most emails: kylrya@gmail.com
