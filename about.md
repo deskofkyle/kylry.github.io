@@ -4,7 +4,9 @@ title: About
 permalink: /about/
 ---
 
-Kyle is a iOS & Software Engineer at Strava. He graduated from the University of Rochester with a degree in Computer Science and Psychology.
+![](/IMG_5911.jpg){:width="310.5px" height="342px"}
+
+I'm an iOS & Software Engineer at [Strava](http://strava.com). I graduated from the University of Rochester with a degree in Computer Science and Psychology in 2017.
 
 # Extended Bio
 
