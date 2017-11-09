@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2017-11-01 17:23:29 -0400
+title:  "Thinking Machines: The Foundations for Modern Computing"
+date:   2017-11-08 17:23:29 -0400
 comments: true
 
 categories: jekyll update
