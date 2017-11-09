@@ -4,7 +4,7 @@ title:  "Thinking Machines: The Foundations for Modern Computing"
 date:   2017-11-08 17:23:29 -0400
 comments: true
 
-categories: jekyll update
+categories: longform
 ---
 
 This was a paper I wrote for Professor Brown's upper level writing class. I wanted to explore some topics of early computing before 1950. Enjoy!
