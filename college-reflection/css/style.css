@@ -1,0 +1,328 @@
+/*
+ Ulysses WordPress Preview: WP Twenty Sixteen
+ */
+
+body {
+	color: #1a1a1a;
+	font-family: Merriweather, Georgia, serif;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.75;
+	background-color: #fff;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 25px;
+	margin-bottom: 25px;
+}
+
+@media screen and (max-width: 668px) {
+	body {
+		margin-right: 7.6923%;
+		margin-left: 7.6923%;
+		width: auto;
+	}
+}
+
+p {
+	margin: 0 0 1.75em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font-weight: 700;
+	margin: 0;
+	text-rendering: optimizeLegibility;
+}
+
+h1 {
+	font-weight: 900;
+	font-size: 28px;
+	font-size: 1.75rem;
+	line-height: 1.25;
+	margin-top: 2em;
+	margin-bottom: 1em;
+}
+
+h1.entry-title {
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-size: 28px;
+	font-size: 1.75rem;
+	font-weight: 700;
+	line-height: 1.25;
+	margin-bottom: 1em;
+}
+
+h1.entry-title a {
+	box-shadow: none;
+	text-decoration: none;	
+	color: #1a1a1a;
+}
+
+h1.entry-title a:hover {
+	box-shadow: 0 1px 0 0 currentColor;
+}
+
+h2 {
+	font-size: 23px;
+	font-size: 1.4375rem;
+	line-height: 1.2173913043;
+	margin-top: 2.4347826087em;
+	margin-bottom: 1.2173913043em;
+}
+
+h3 {
+	font-size: 19px;
+	font-size: 1.1875rem;
+	line-height: 1.1052631579;
+	margin-top: 2.9473684211em;
+	margin-bottom: 1.4736842105em;
+}
+
+h4, h5, h6  {
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.3125;
+	margin-top: 3.5em;
+	margin-bottom: 1.75em;
+}
+
+h4 {
+	letter-spacing: 0.140625em;
+	text-transform: uppercase;
+}
+
+
+h6 {
+	font-style: italic;
+}
+
+hr {
+	background-color: #d1d1d1;
+	border: 0;
+	height: 1px;
+	margin: 0 0 1.75em;
+}
+
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: bold;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+a {
+	color: #007acc;
+	text-decoration: none;
+	box-shadow: 0 1px 0 0 currentColor;
+	background-color: transparent;
+}
+
+ul, ol {
+	margin: 0 0 1.75em 1.25em;
+	padding: 0;
+}
+
+ol {
+	list-style: decimal;
+	margin-left: 1.5em;
+}
+
+ul {
+	list-style: disc;
+}
+
+blockquote {
+	quotes: none;
+	border: 0 solid #1a1a1a;
+	border-left-width: 4px;
+	color: #686868;
+	font-size: 19px;
+	font-size: 1.1875rem;
+	font-style: italic;
+	line-height: 1.4736842105;
+	margin: 0 0 1.4736842105em;
+	padding: 0 0 0 1.263157895em;
+}
+
+code, kbd, tt, var, samp, pre {
+	font-family: Inconsolata, monospace;
+	font-size: 1em;
+}
+
+pre {
+	border: 1px solid #d1d1d1;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.3125;
+	margin: 0 0 1.75em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.75em;
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+figure {
+	margin: 0;
+	margin-bottom: 1.75em;
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
+	vertical-align: middle;
+	border: 0;
+}
+
+figcaption {
+	color: #686868;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	font-style: italic;
+	line-height: 1.6153846154;
+	padding-top: 0.5384615385em;
+}
+
+
+table, th, td {
+	border: 1px solid #d1d1d1;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+	border-width: 1px 0 0 1px;
+	margin: 0 0 1.75em;
+	table-layout: fixed;
+	/* Prevents HTML tables from becoming too wide */
+	width: 100%;
+}
+
+
+th, td {
+	padding: 0.4375em;
+}
+
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+
+th {
+	border-width: 0 1px 1px 0;
+	font-weight: 700;
+}
+
+td {
+	border-width: 0 1px 1px 0;
+}
+
+div.entry-summary {
+	color: #686868;
+	font-size: 19px;
+	line-height: 28px;
+	
+	margin-top: -21px;
+	margin-left: 0px;
+	margin-bottom:	42px;
+	margin-right: 0px;
+
+	word-wrap: break-word;
+}
+
+div.post-thumbnail {
+	margin-top: 0px;	
+	margin-left: 0px;
+	margin-bottom:	42px;
+	margin-right: 0px;
+}
+
+
+/* FONTS */
+@font-face {
+	font-family: 'Inconsolata';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Inconsolata'), url(https://fonts.gstatic.com/s/inconsolata/v12/BjAYBlHtW3CJxDcjzrnZCKfTCPadK0KLfdEfFtGWCYw.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Merriweather';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Merriweather'), local('Merriweather-Regular'), url(https://fonts.gstatic.com/s/merriweather/v13/RFda8w1V0eDZheqfcyQ4EOY5mlVXtdNkpsMpKkrDXP4.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Merriweather';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Merriweather Bold'), local('Merriweather-Bold'), url(https://fonts.gstatic.com/s/merriweather/v13/ZvcMqxEwPfh2qDWBPxn6nkIs04IdwfM8211RGOj6sr8.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Merriweather';
+	font-style: normal;
+	font-weight: 900;
+	src: local('Merriweather Black'), local('Merriweather-Black'), url(https://fonts.gstatic.com/s/merriweather/v13/ZvcMqxEwPfh2qDWBPxn6noEI1oWoTY7XwaltOQOO8DE.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Merriweather';
+	font-style: italic;
+	font-weight: 400;
+	src: local('Merriweather Italic'), local('Merriweather-Italic'), url(https://fonts.gstatic.com/s/merriweather/v13/So5lHxHT37p2SS4-t60SlMCDUKfIFSGVV_H-ln9NBDw.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Merriweather';
+	font-style: italic;
+	font-weight: 700;
+	src: local('Merriweather Bold Italic'), local('Merriweather-BoldItalic'), url(https://fonts.gstatic.com/s/merriweather/v13/EYh7Vl4ywhowqULgRdYwIJ8prASTbjQD-4Pbn4pC6Zg.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Merriweather';
+	font-style: italic;
+	font-weight: 900;
+	src: local('Merriweather Black Italic'), local('Merriweather-BlackItalic'), url(https://fonts.gstatic.com/s/merriweather/v13/EYh7Vl4ywhowqULgRdYwIKXoNPuPOWZAEaZ4lFCaRdI.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v7/zhcz-_WihjSQC0oHJ9TCYL3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Montserrat-Bold'), url(https://fonts.gstatic.com/s/montserrat/v7/IQHow_FEYlDC4Gzy_m8fcnbFhgvWbfSbdVg11QabG8w.woff) format('woff');
+}
