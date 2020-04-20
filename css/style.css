@@ -12,7 +12,7 @@ body {
 	line-height: 1.5;
 	padding: 48px 30px;
 	background-color: #fff;
-	max-width: 474px;
+	max-width: 650px;
 	margin: 0 auto;
 	-webkit-hyphens: auto;
 	hyphens: auto;
@@ -118,7 +118,7 @@ sup {
 }
 
 a {
-	color: #24890d;
+	color: #fd4c06;
 	text-decoration: underline;
 }
 
@@ -134,7 +134,7 @@ a:active {
 
 a:active,
 a:hover {
-	color: #41a62a;
+	color: #fd4c06;
 }
 
 ul,
@@ -242,7 +242,7 @@ td {
 }
 
 ::selection {
-	background: #24890d;
+	background: #fd4c06;
 	color: #fff;
 	text-shadow: none;
 }
