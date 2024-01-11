@@ -5,6 +5,17 @@ body, html, p {
   height: 100%;
 }
 
+.navbar {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .navbar-brand .subtitle {
+            font-size: 0.8em; /* Smaller font size for subtitle */
+            display: block;
+        }
+
 .background-layer {
   position: fixed; /* Fixed position */
   width: 100%;
@@ -14,7 +25,7 @@ body, html, p {
   align-items: top;
   z-index: -1;
   background-color: black;
-  padding-top: 80px;
+  padding-top: 120px;
 }
 
 
