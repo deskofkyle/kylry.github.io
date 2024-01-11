@@ -1,22 +1,36 @@
 window.addEventListener('scroll', function() {
-        var image = document.getElementById('image');
-        var windowHeight = window.innerHeight;
-        var scrollY = window.scrollY || window.pageYOffset;
+    var image = document.getElementById('image');
+    var windowHeight = window.innerHeight;
+    var scrollY = window.scrollY || window.pageYOffset;
 
-        var scrollFraction = scrollY / windowHeight;
+    var scrollFraction = scrollY / windowHeight;
+    var currentImageSrc = image.getAttribute('src');
 
-        // Change image based on scroll position
-        if (scrollFraction < 0.7) {
-            // Scroll is between 0% and 100%
-            image.src = 'box-1.png';
-        } else if (scrollFraction < 1.7) {
-            // Scroll is between 101% and 200%
-            image.src = 'box-2.png';
-        } else if (scrollFraction > 2.7) {
-            // Scroll is between 201% and 300%
-            image.src = 'box-3.png';
-        } // Add more conditions as needed for more images
+    // Function to change image source
+    function changeImage(newSrc) {
+        if (currentImageSrc !== newSrc) {
+            // Reduce opacity
+            image.style.opacity = 0;
 
-        // Ensure opacity is set to 1 for new images
-        image.style.opacity = 1;
+            // Wait for the transition to complete
+            setTimeout(function() {
+                // Change image source
+                image.src = newSrc;
+                currentImageSrc = newSrc;
+
+                // Restore opacity
+                image.style.opacity = 1;
+            }, 500); // Match this timeout with the CSS transition duration
+        }
+    }
+
+    // Change image based on scroll position
+    if (scrollFraction < 0.5) {
+        changeImage('box-1.png');
+    } else if (scrollFraction < 1.0) {
+        changeImage('box-2.png');
+    } else if (scrollFraction > 1.5) {
+        changeImage('box-3.png');
+    }
+    // Add more conditions as needed for more images
 });

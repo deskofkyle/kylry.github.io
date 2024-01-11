@@ -22,6 +22,7 @@ body, html, p {
   width: 90%;
   height: 60%;
   object-fit: contain;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .scroll-layer {
