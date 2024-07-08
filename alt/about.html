@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALT Studio</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            background-color: black;
+            color: white;
+        }
+        .header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+        .header a {
+            color: white;
+            margin-right: 20px;
+            text-decoration: none;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff007f;
+            text-transform: uppercase;
+        }
+        .links {
+            font-weight: bold;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 40px;
+            display: flex;
+            gap: 50px;
+        }
+        .links a {
+            color: white;
+            text-decoration: none;
+            font-size: 2rem; /* Large font size for desktop */
+        }
+        .hero-section {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+        }
+        .blur-box {
+            filter: blur(5px);
+            width: 525px; /* 9/12 of 700px */
+            height: 700px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box {
+            position: absolute;
+            transition: background-color 2s ease;
+            filter: blur(50px);
+        }
+        .box1 {
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+        .box2 {
+            width: 80%;
+            height: 80%;
+        }
+        .box3 {
+            width: 60%;
+            height: 60%;
+        }
+        .box4 {
+            width: 40%;
+            height: 40%;
+        }
+        @media (max-width: 768px) {
+            .links {
+                padding: 20px;
+            }
+            .links a {
+                font-size: 1.5rem; /* Normal font size for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="#" class="logo">ALT Studio</a>
+    </div>
+
+    <div class="hero-section">
+        <div class="backdrop">
+            <!-- Neon light backdrop -->
+        </div>
+        <div class="caption">
+            <h1>Established 2022</h1>
+            <p>ALT Studio blends the intersection of art and technology with innovating lighting objects.</p>
+        </div>
+    </div>
+
+    <div class="links">
+        <a href="https://www.etsy.com/shop/altstudiousa/?etsrc=sdt">Shop</a>
+        <a href="about.html">About</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const colors = ['blue', 'magenta', 'red', 'green', 'yellow', 'cyan', 'purple'];
+        const boxes = document.querySelectorAll('.blur-box .box');
+
+        function changeColors() {
+            boxes.forEach(box => {
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                box.style.backgroundColor = randomColor;
+            });
+        }
+
+        setInterval(changeColors, 5000);
+        changeColors(); // Initial call to set colors immediately
+    </script>
+</body>
+</html>
