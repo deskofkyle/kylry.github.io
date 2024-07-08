@@ -128,12 +128,21 @@
         const colors = ['blue', 'magenta', 'red', 'green', 'yellow', 'cyan', 'purple'];
         const boxes = document.querySelectorAll('.blur-box .box');
 
+        function getRandomUniqueColors(arr, num) {
+            const shuffled = arr.slice(0).sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, num);
+        }
+
         function changeColors() {
-            boxes.forEach(box => {
-                const randomColor = colors[Math.floor(Math.random() * colors.length)];
-                box.style.backgroundColor = randomColor;
+            const uniqueColors = getRandomUniqueColors(colors, boxes.length);
+            boxes.forEach((box, index) => {
+                box.style.backgroundColor = uniqueColors[index];
             });
         }
+
+        setInterval(changeColors, 5000);
+        changeColors(); // Initial call to set colors immediately
+
 
         setInterval(changeColors, 5000);
         changeColors(); // Initial call to set colors immediately
