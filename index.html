@@ -1,4 +1,5 @@
 <!doctype html>
+<html lang="en">
 <head>
    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
    <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,99 +12,92 @@
    <link rel="stylesheet" type="text/css" href="css/style.css" />
    <style>
       h1 {
-      font-size: 40px;
-      text-align: left;
+         font-size: 40px;
+         text-align: left;
       }
       .main {
-      max-width: 1100px;
-      text-align: left;
-      margin: auto;
-      }
-      .bio {
-      text-align: left;
-      }
-
-      .circle-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 35%;
-    overflow: hidden;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-    transition: box-shadow 0.3s ease;
-   }
-
-   .circle-image img {
-       width: 100%;
-       height: auto;
-   }
-
-         .main {
+         max-width: 1100px;
+         text-align: left;
+         margin: auto;
          display: flex;
          flex-wrap: wrap;
          justify-content: space-between;
-         /* ... [other styles for .main] ... */
       }
-
+      .bio {
+         text-align: left;
+      }
+      .circle-image {
+         width: 100px;
+         height: 100px;
+         border-radius: 26%;
+         overflow: hidden;
+         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+         transition: box-shadow 0.3s ease;
+      }
+      .circle-image img {
+         width: 100%;
+         height: auto;
+      }
       .column {
-         flex-basis: 48%; /* Adjusts the width of each column */
-         /* You can add padding or margin here for spacing between columns */
+         flex-basis: 100%; /* Adjusts the width of each column */
       }
-
    </style>
 </head>
 <body>
-      <img class="circle-image" src="profile-photo.jpg">
-      <h1>Kyle Ryan</h1>
-      <p class="bio"><em>I am a Software Engineer based in San Francisco, CA focused on intersection of technology, humanity, and art</a>.</em></p>
-      <div class="main">
+   <img class="circle-image" src="profile-photo.jpg" alt="Profile Photo">
+   <h1>Kyle Ryan</h1>
+   <p class="bio"><em>I am a Software Engineer based in San Francisco, CA focused on the intersection of technology, humanity, and art.</em></p>
+   <div class="main">
+      <div class="column">
          <h2>Contact</h2>
-         <li>I respond to most emails: kylrya [at] gmail [dot] com</li>
+         <ul>
+            <li>I respond to most emails: kylrya [at] gmail [dot] com</li>
          </ul>
          <h2>Career</h2>
          <ul>
-             <li>
-               <p><strong><a href="http://usa.twinhealth.com">Twin</a></strong>
-                  <p>Twin is a AI & ML disease prevention solution used by top insurance & companies like Berkshire Hawthaway, Blackstone, Blue Cross and Blue Shield, to drive patient outcomes. </p>
-                  <i>Senior Software Engineer</i> (Sep 2020 - Present)
-               </p>
+            <li>
+               <p><strong><a href="http://usa.twinhealth.com">Twin</a></strong></p>
+               <i>Tech Lead, iOS</i> (Jan. 2024 - Present), <i>Senior Software Engineer</i> (Jan. 2022 - Dec. 2023), <i>Senior Software Engineer</i> (Sep. 2020 - Dec. 2021)
+
+               <p>Twin is an AI & ML diabetes prevention solution used by top insurance & companies like Berkshire Hathaway, Blackstone, Blue Cross, and Blue Shield, to drive patient outcomes.</p>
             </li>
             <li>
-               <p><strong><a href="http://strava.com">Strava</a></strong>
-               <p>Strava is the world's most active social workouts platform used to share over 1 billion activites per year.</p>
+               <p><strong><a href="http://strava.com">Strava</a></strong></p>
                <i>Software Engineer II, Software Engineer I, Software Engineer Intern</i> (June 2017 - Sep 2020)
-               </p>
+
+               <p>Strava is the world's most active social workouts platform used to share over 1 billion activities per year.</p>
             </li>
             <li>
-               <p><strong><a href="http://rochester.edu">University of Rochester - Computer Science</a></strong>
-                  <br><i>iOS App Programming Teaching Assistant (Sept 2016 - Dec 2017)</i>
-               </p>
+               <p><strong><a href="http://rochester.edu">University of Rochester - Computer Science</a></strong></p>
+               <i>iOS App Programming Teaching Assistant (Sept 2016 - Dec 2017)</i>
             </li>
             <li>
-               <p><strong><a href="http://instapaper.com">Instapaper (acquired by Pinterest, now independent)</a></strong>
-                  <br><i>iOS Engineering Intern (June 2014 - Aug 2014)</i>
-               </p>
+               <p><strong><a href="http://instapaper.com">Instapaper (acquired by Pinterest, now independent)</a></strong></p>
+               <i>iOS Engineering Intern (June 2014 - Aug 2014)</i>
             </li>
             <li>
-               <p><strong><a href="http://hackny.org">HackNY</a></strong>
-                  <br><i>Undergraduate Fellow (June 2014 - Aug 2014)</i>
-               </p>
+               <p><strong><a href="http://hackny.org">HackNY</a></strong></p>
+               <i>Undergraduate Fellow (June 2014 - Aug 2014)</i>
             </li>
          </ul>
-         <h2>Apps</h2>
+      </div>
+      <div class="column">
+         <h2>My Apps</h2>
          <ul>
-            <p>I have had the privilege to author a few well-used independent iOS apps and software.</p>
             <li>
-                 <p><strong><a href="https://itunes.apple.com/us/app/opencare/id1344067100?ls=1&mt=8">OpenCare</a></strong>
-                  <br><i>The modern care tracking solution for you & your loved ones. (June 2017 - Present)</i>
-               </p>
+               <p><strong><a href="https://itunes.apple.com/us/app/opencare/id1344067100?ls=1&mt=8">OpenCare</a></strong></p>
+               <i>The modern care tracking solution for you & your loved ones. (June 2017 - Present)</i>
+            </li>
+            <li>
+               <p><strong><a href="https://itunes.apple.com/us/app/fitness-stickers/id123456789?ls=1&mt=8">Fitness Stickers</a></strong></p>
+               <i>Export workout data to stickers and add on top of your photos. (April 2023 - Present)</i>
             </li>
          </ul>
          <h2>Education</h2>
          <ul>
             <li>
-               <p><strong><a href="http://cs.rochester.edu/">University of Rochester - Hajim School of Engineering and Applied Sciences</a></strong>
-                  <br><i>Bachelor's Degree in Computer Science and Psychology (Jan 2014 - Dec 2017)</i>
-               </p>
+               <p><strong><a href="http://cs.rochester.edu/">University of Rochester - Hajim School of Engineering and Applied Sciences</a></strong></p>
+               <i>Bachelor's Degree in Computer Science and Psychology (Jan 2014 - Dec 2017)</i>
             </li>
          </ul>
          <h2>Links</h2>
@@ -114,58 +108,37 @@
          </ul>
          <h2>Writing</h2>
          <ul>
-         	<li>
-         		<p><a href="https://kylry.svbtle.com/studying-cs">Q and A: Studying Computer Science</a></p>
-         	</li>
-            <li>
-               <p><a href="https://medium.com/betadrop-community/betadrop-announcement-5484778d0f25">We’re Building a Way for People to Get Feedback</a></p>
-            </li>
-            <li>
-               <p><a href="https://medium.com/@kylry/the-importance-of-upholding-oo-design-patterns-e0fd2064d192">The Importance of Upholding OO Design Patterns</a></p>
-            </li>
-            <li>
-               <p><a href="https://medium.com/@kylry/let-s-recognize-how-fast-we-re-moving-e3a8d56fbfae">Let’s Recognize How Fast We’re Moving</a></p>
-            </li>
-            <li>
-               <p><a href="https://medium.com/@kylry/english-2-0-language-that-works-more-like-software-ce51d90ee704">English 2.0 — Language that works more like software</a></p>
-            </li>
-            <li>
-               <p><a href="https://medium.com/mile-markers/how-to-build-an-instagram-time-machine-aa0f51ba610">How To Build an Instagram Time Machine</a></p>
-            </li>
-            <li>
-               <p><a href="https://medium.com/@kylry/serendipitous-connectivity-a7d42e32eea9">Serendipitous Connectivity</a></p>
-            </li>
-            <li>
-               <p><a href="https://medium.com/@kylry/germany-high-school-and-a-styrofoam-box-what-i-learned-by-going-to-the-edge-of-space-acdc7056ed2b">Germany, High School and a Styrofoam Box — what I learned by going to the edge of space</a></p>
-            </li>
-            <li>
-               <p><a href="https://medium.com/@kylry/educations-greatest-pitfall-should-be-its-greatest-strength-82c86796c61b">Education’s greatest pitfall should be its greatest strength</a></p>
-            </li>
+            <li><a href="https://kylry.svbtle.com/studying-cs">Q and A: Studying Computer Science</a></li>
+            <li><a href="https://medium.com/betadrop-community/betadrop-announcement-5484778d0f25">We’re Building a Way for People to Get Feedback</a></li>
+            <li><a href="https://medium.com/@kylry/the-importance-of-upholding-oo-design-patterns-e0fd2064d192">The Importance of Upholding OO Design Patterns</a></li>
+            <li><a href="https://medium.com/@kylry/let-s-recognize-how-fast-we-re-moving-e3a8d56fbfae">Let’s Recognize How Fast We’re Moving</a></li>
+            <li><a href="https://medium.com/@kylry/english-2-0-language-that-works-more-like-software-ce51d90ee704">English 2.0 — Language that works more like software</a></li>
+            <li><a href="https://medium.com/mile-markers/how-to-build-an-instagram-time-machine-aa0f51ba610">How To Build an Instagram Time Machine</a></li>
+            <li><a href="https://medium.com/@kylry/serendipitous-connectivity-a7d42e32eea9">Serendipitous Connectivity</a></li>
+            <li><a href="https://medium.com/@kylry/germany-high-school-and-a-styrofoam-box-what-i-learned-by-going-to-the-edge-of-space-acdc7056ed2b">Germany, High School and a Styrofoam Box — what I learned by going to the edge of space</a></li>
+            <li><a href="https://medium.com/@kylry/educations-greatest-pitfall-should-be-its-greatest-strength-82c86796c61b">Education’s greatest pitfall should be its greatest strength</a></li>
          </ul>
          <h2>Misc</h2>
          <ul>
             <li><a href="http://motherfuckingwebsite.com/">Design inspiration for this website.</a> Over-design is rampant in modern technology. This website is pure HTML.</li>
          </ul>
       </div>
+   </div>
 </body>
 <script type="text/javascript">
-       document.addEventListener('DOMContentLoaded', function () {
-        var circleImage = document.querySelector('.circle-image');
-
-        circleImage.addEventListener('mousemove', function (e) {
-            var rect = e.target.getBoundingClientRect();
-            var x = e.clientX - rect.left;
-            var y = e.clientY - rect.top;
-
-            var dx = Math.round((x / rect.width - 0.5) * 40);
-            var dy = Math.round((y / rect.height - 0.5) * 40);
-
-            circleImage.style.boxShadow = `${dx}px ${dy}px 15px rgba(0, 0, 0, 0.3)`;
-        });
-
-        circleImage.addEventListener('mouseleave', function (e) {
-            circleImage.style.boxShadow = `0px 0px 15px rgba(0, 0, 0, 0.3)`;
-        });
-    });
+   document.addEventListener('DOMContentLoaded', function () {
+      var circleImage = document.querySelector('.circle-image');
+      circleImage.addEventListener('mousemove', function (e) {
+         var rect = e.target.getBoundingClientRect();
+         var x = e.clientX - rect.left;
+         var y = e.clientY - rect.top;
+         var dx = Math.round((x / rect.width - 0.5) * 40);
+         var dy = Math.round((y / rect.height - 0.5) * 40);
+         circleImage.style.boxShadow = `${dx}px ${dy}px 15px rgba(0, 0, 0, 0.3)`;
+      });
+      circleImage.addEventListener('mouseleave', function (e) {
+         circleImage.style.boxShadow = `0px 0px 15px rgba(0, 0, 0, 0.3)`;
+      });
+   });
 </script>
 </html>
