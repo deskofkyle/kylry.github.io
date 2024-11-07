@@ -1,27 +1,28 @@
 <!doctype html>
 <html lang="en">
 <head>
-   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta charset="utf-8" />
    <title>Desk of Kyle</title>
-   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
-   <link rel="canonical" href="https://www.deskofkyle.com/"/>
-   <meta property="og:site_name" content="Desk of Kyle"/>
-   <meta property="og:url" content="https://www.deskofkyle.com/"/>
-   <link rel="stylesheet" type="text/css" href="css/style.css" />
+   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+   <link rel="canonical" href="https://www.deskofkyle.com/">
+   <meta property="og:site_name" content="Desk of Kyle">
+   <meta property="og:url" content="https://www.deskofkyle.com/">
+   <link rel="stylesheet" href="css/style.css">
    <style>
       h1 {
-         font-size: 40px;
+         font-size: 2.5rem;
          text-align: left;
       }
       .main {
          max-width: 1100px;
-         text-align: left;
          margin: auto;
          display: flex;
          flex-wrap: wrap;
+         gap: 20px;
          justify-content: space-between;
+         text-align: left;
       }
       .bio {
          text-align: left;
@@ -29,42 +30,48 @@
       .circle-image {
          width: 100px;
          height: 100px;
-         border-radius: 26%;
+         border-radius: 50%;
          overflow: hidden;
          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
          transition: box-shadow 0.3s ease;
       }
       .circle-image img {
          width: 100%;
-         height: auto;
+         height: 100%;
+         object-fit: cover;
       }
       .column {
-         flex-basis: 100%; /* Adjusts the width of each column */
+         flex-basis: 100%;
       }
    </style>
 </head>
 <body>
-   <img class="circle-image" src="profile-photo.jpg" alt="Profile Photo">
-   <h1>Kyle Ryan</h1>
-   <p class="bio"><em>I am a Software Engineer based in San Francisco, CA focused on the intersection of technology, humanity, and art.</em></p>
    <div class="main">
-      <div class="column">
+      <div>
+         <img class="circle-image" src="profile-photo.jpg" alt="Profile Photo">
+         <h1>Kyle Ryan</h1>
+         <p class="bio"><em>I am a Software Engineer based in San Francisco, CA focused on the intersection of technology, humanity, and art.</em></p>
          <h2>Contact</h2>
          <ul>
             <li>I respond to most emails: kylrya [at] gmail [dot] com</li>
          </ul>
+      </div>
+      <section>
          <h2>Career</h2>
          <ul>
             <li>
+               <p><strong><a href="http://speak.com">Speak</a></strong></p>
+               <i>Senior Software Engineer</i> (Oct. 2024 - Present)
+               <p>Backed by OpenAI, Speak is one of the top language learning apps.</p>
+            </li>
+            <li>
                <p><strong><a href="http://usa.twinhealth.com">Twin</a></strong></p>
-               <i>Tech Lead, iOS</i> (Jan. 2024 - Present), <i>Senior Software Engineer</i> (Jan. 2022 - Dec. 2023), <i>Senior Software Engineer</i> (Sep. 2020 - Dec. 2021)
-
-               <p>Twin is an AI & ML diabetes prevention solution used by top insurance & companies like Berkshire Hathaway, Blackstone, Blue Cross, and Blue Shield, to drive patient outcomes.</p>
+               <i>iOS Engineering Lead</i> (Jan. 2024 - Sept. 2024), <i>Senior Software Engineer</i> (Jan. 2022 - Dec. 2023), <i>Senior Software Engineer</i> (Sep. 2020 - Dec. 2021)
+               <p>Twin is an AI & ML diabetes prevention solution used by top insurance companies like Walmart, Berkshire Hathaway, Blackstone, Blue Cross, and Blue Shield, to drive patient outcomes.</p>
             </li>
             <li>
                <p><strong><a href="http://strava.com">Strava</a></strong></p>
                <i>Software Engineer II, Software Engineer I, Software Engineer Intern</i> (June 2017 - Sep 2020)
-
                <p>Strava is the world's most active social workouts platform used to share over 1 billion activities per year.</p>
             </li>
             <li>
@@ -80,19 +87,17 @@
                <i>Undergraduate Fellow (June 2014 - Aug 2014)</i>
             </li>
          </ul>
-      </div>
-      <div class="column">
+      </section>
+      <section>
          <h2>My Apps</h2>
          <ul>
             <li>
                <p><strong><a href="https://itunes.apple.com/us/app/opencare/id1344067100?ls=1&mt=8">OpenCare</a></strong></p>
                <i>The modern care tracking solution for you & your loved ones. (June 2017 - Present)</i>
             </li>
-            <li>
-               <p><strong><a href="https://itunes.apple.com/us/app/fitness-stickers/id123456789?ls=1&mt=8">Fitness Stickers</a></strong></p>
-               <i>Export workout data to stickers and add on top of your photos. (April 2023 - Present)</i>
-            </li>
          </ul>
+      </section>
+      <section>
          <h2>Education</h2>
          <ul>
             <li>
@@ -100,12 +105,16 @@
                <i>Bachelor's Degree in Computer Science and Psychology (Jan 2014 - Dec 2017)</i>
             </li>
          </ul>
+      </section>
+      <section>
          <h2>Links</h2>
          <ul>
             <li><a href="https://www.linkedin.com/in/kyle-ryan-79b9b7a5/">LinkedIn</a></li>
             <li><a href="http://instagram.com/deskofkyle">Instagram</a></li>
             <li><a href="http://unsplash.com/kylry">Photography</a></li>
          </ul>
+      </section>
+      <section>
          <h2>Writing</h2>
          <ul>
             <li><a href="https://kylry.svbtle.com/studying-cs">Q and A: Studying Computer Science</a></li>
@@ -118,27 +127,19 @@
             <li><a href="https://medium.com/@kylry/germany-high-school-and-a-styrofoam-box-what-i-learned-by-going-to-the-edge-of-space-acdc7056ed2b">Germany, High School and a Styrofoam Box — what I learned by going to the edge of space</a></li>
             <li><a href="https://medium.com/@kylry/educations-greatest-pitfall-should-be-its-greatest-strength-82c86796c61b">Education’s greatest pitfall should be its greatest strength</a></li>
          </ul>
+      </section>
+      <section>
          <h2>Misc</h2>
          <ul>
-            <li><a href="http://motherfuckingwebsite.com/">Design inspiration for this website.</a> Over-design is rampant in modern technology. This website is pure HTML.</li>
+            <li><a href="http://motherfuckingwebsite.com/">Design inspiration for this website. Over-design is rampant in modern technology. This website is pure HTML.</a></li>
          </ul>
-      </div>
+      </section>
    </div>
-</body>
-<script type="text/javascript">
-   document.addEventListener('DOMContentLoaded', function () {
-      var circleImage = document.querySelector('.circle-image');
-      circleImage.addEventListener('mousemove', function (e) {
-         var rect = e.target.getBoundingClientRect();
-         var x = e.clientX - rect.left;
-         var y = e.clientY - rect.top;
-         var dx = Math.round((x / rect.width - 0.5) * 40);
-         var dy = Math.round((y / rect.height - 0.5) * 40);
-         circleImage.style.boxShadow = `${dx}px ${dy}px 15px rgba(0, 0, 0, 0.3)`;
-      });
-      circleImage.addEventListener('mouseleave', function (e) {
-         circleImage.style.boxShadow = `0px 0px 15px rgba(0, 0, 0, 0.3)`;
-      });
-   });
-</script>
-</html>
+   <script>
+      document.addEventListener('DOMContentLoaded', function () {
+         const circleImage = document.querySelector('.circle-image');
+         circleImage.addEventListener('mousemove', (e) => {
+            const { left, top, width, height } = e.target.getBoundingClientRect();
+            const dx = Math.round(((e.clientX - left) / width - 0.5) * 40);
+            const dy = Math.round(((e.clientY - top) / height - 0.5) * 40);
+            circleImage.style.boxShadow
