@@ -30,7 +30,7 @@
       .circle-image {
          width: 100px;
          height: 100px;
-         border-radius: 50%;
+         border-radius: 35%;
          overflow: hidden;
          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
          transition: box-shadow 0.3s ease;
@@ -142,4 +142,12 @@
             const { left, top, width, height } = e.target.getBoundingClientRect();
             const dx = Math.round(((e.clientX - left) / width - 0.5) * 40);
             const dy = Math.round(((e.clientY - top) / height - 0.5) * 40);
-            circleImage.style.boxShadow
+            circleImage.style.boxShadow = `${dx}px ${dy}px 15px rgba(0, 0, 0, 0.3)`;
+         });
+         circleImage.addEventListener('mouseleave', () => {
+            circleImage.style.boxShadow = '0px 0px 15px rgba(0, 0, 0, 0.3)';
+         });
+      });
+   </script>
+</body>
+</html>
