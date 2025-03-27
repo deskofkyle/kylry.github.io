@@ -4,150 +4,623 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Desk of Kyle</title>
+   <title>Kyle Ryan | Software Engineer</title>
    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
    <link rel="canonical" href="https://www.deskofkyle.com/">
-   <meta property="og:site_name" content="Desk of Kyle">
+   <meta property="og:site_name" content="Kyle Ryan">
    <meta property="og:url" content="https://www.deskofkyle.com/">
    <link rel="stylesheet" href="css/style.css">
    <style>
-      h1 {
-         font-size: 2.5rem;
-         text-align: left;
+      :root {
+         --bg: #0a0a0a;
+         --text: #ffffff;
+         --accent: #64ffda;
+         --secondary: #8892b0;
+         --surface: #112240;
+         --surface-light: #233554;
       }
-      .main {
-         max-width: 1100px;
-         margin: auto;
+
+      * {
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+      }
+
+      html {
+         font-size: 16px;
+      }
+
+      body {
+         background: var(--bg);
+         color: var(--text);
+         font-family: 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+         line-height: 1.6;
+         -webkit-font-smoothing: antialiased;
+      }
+
+      .container {
+         width: 90%;
+         max-width: 1400px;
+         margin: 0 auto;
+         padding: clamp(16px, 3vw, 80px);
+      }
+
+      .header {
+         min-height: 100vh;
          display: flex;
-         flex-wrap: wrap;
-         gap: 20px;
-         justify-content: space-between;
-         text-align: left;
+         align-items: center;
+         position: relative;
+         padding: clamp(80px, 10vh, 200px) 0;
       }
+
+      .header::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: 
+            radial-gradient(circle at 10% 10%, rgba(100, 255, 218, 0.1), transparent 40%),
+            radial-gradient(circle at 90% 90%, rgba(100, 255, 218, 0.05), transparent 40%);
+         pointer-events: none;
+      }
+
+      .intro {
+         max-width: min(100%, 1000px);
+      }
+
+      .tag {
+         color: var(--accent);
+         font-size: clamp(1rem, 2vw, 1.2rem);
+         margin-bottom: clamp(12px, 2vw, 20px);
+      }
+
+      h1 {
+         font-size: clamp(2rem, 6vw, 6rem);
+         line-height: 1.1;
+         margin-bottom: clamp(16px, 3vw, 30px);
+         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+         font-weight: 800;
+      }
+
       .bio {
-         text-align: left;
+         color: var(--secondary);
+         font-size: clamp(1rem, 2.5vw, 1.5rem);
+         max-width: min(100%, 600px);
+         margin-bottom: clamp(24px, 4vw, 40px);
       }
-      .circle-image {
-         width: 100px;
-         height: 100px;
-         border-radius: 35%;
+
+      .content {
+         max-width: min(100%, 1200px);
+         margin: 0 auto;
+         padding: clamp(60px, 8vw, 100px) 0;
+      }
+
+      .section {
+         margin-bottom: clamp(60px, 8vw, 100px);
+      }
+
+      .section-header {
+         display: flex;
+         align-items: center;
+         margin-bottom: clamp(40px, 6vw, 60px);
+         max-width: min(100%, 1000px);
+         margin-left: auto;
+         margin-right: auto;
+         padding: 0 clamp(16px, 3vw, 24px);
+      }
+
+      .section-title {
+         font-size: clamp(1.5rem, 4vw, 2rem);
+         color: var(--text);
+         margin-right: 20px;
+         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+         white-space: nowrap;
+      }
+
+      .section-line {
+         flex-grow: 1;
+         height: 1px;
+         background: var(--surface-light);
+      }
+
+      .experience-grid {
+         display: flex;
+         flex-direction: column;
+         gap: clamp(32px, 5vw, 60px);
+         max-width: min(100%, 1000px);
+         margin: 0 auto;
+         position: relative;
+         padding: 0 clamp(16px, 3vw, 24px);
+      }
+
+      .experience-grid::before {
+         content: '';
+         position: absolute;
+         left: calc(50% - 1px);
+         top: 0;
+         bottom: 0;
+         width: 2px;
+         background: var(--surface-light);
+      }
+
+      .experience-item {
+         background: var(--surface);
+         border-radius: 8px;
+         padding: clamp(24px, 4vw, 40px);
+         position: relative;
+         width: calc(50% - 50px);
+         margin-left: auto;
+         margin-right: 0;
+      }
+
+      .experience-item:nth-child(even) {
+         margin-left: 0;
+         margin-right: auto;
+      }
+
+      .experience-item::before {
+         content: '';
+         position: absolute;
+         width: 20px;
+         height: 20px;
+         background: var(--accent);
+         border-radius: 50%;
+         border: 6px solid var(--bg);
+         top: 30px;
+      }
+
+      .experience-item::after {
+         content: '';
+         position: absolute;
+         width: 30px;
+         height: 2px;
+         background: var(--surface-light);
+         top: 40px;
+      }
+
+      .experience-item:nth-child(odd)::before {
+         left: -60px;
+      }
+
+      .experience-item:nth-child(even)::before {
+         right: -60px;
+      }
+
+      .experience-item:nth-child(odd)::after {
+         left: -30px;
+      }
+
+      .experience-item:nth-child(even)::after {
+         right: -30px;
+      }
+
+      .experience-header {
+         display: flex;
+         align-items: flex-start;
+         gap: clamp(12px, 2vw, 20px);
+         margin-bottom: 15px;
+      }
+
+      .company-logo {
+         width: clamp(40px, 6vw, 50px);
+         height: clamp(40px, 6vw, 50px);
+         border-radius: 4px;
+         flex-shrink: 0;
          overflow: hidden;
-         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-         transition: box-shadow 0.3s ease;
       }
-      .circle-image img {
+
+      .company-logo img {
          width: 100%;
          height: 100%;
          object-fit: cover;
       }
-      .column {
-         flex-basis: 100%;
+
+      .company-info {
+         flex-grow: 1;
+         min-width: 0;
+      }
+
+      .location {
+         color: var(--secondary);
+         font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+         margin-top: 5px;
+      }
+
+      .company-name {
+         font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+         color: var(--text);
+         margin-bottom: 5px;
+         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      }
+
+      .role {
+         color: var(--accent);
+         margin-bottom: 5px;
+         font-size: clamp(0.9rem, 2vw, 1.1rem);
+      }
+
+      .duration {
+         color: var(--secondary);
+         font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+      }
+
+      .experience-details {
+         color: var(--secondary);
+         font-size: clamp(0.9rem, 1.8vw, 1rem);
+         line-height: 1.6;
+      }
+
+      code {
+         color: var(--accent);
+         background: rgba(100, 255, 218, 0.1);
+         padding: 0.2em 0.4em;
+         border-radius: 3px;
+         font-size: 0.9em;
+      }
+
+      .skills-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+         gap: clamp(12px, 2vw, 20px);
+         padding: 0 clamp(16px, 3vw, 24px);
+      }
+
+      .skill-category {
+         background: var(--surface);
+         padding: clamp(16px, 3vw, 20px);
+         border-radius: 4px;
+      }
+
+      .skill-category h3 {
+         color: var(--accent);
+         margin-bottom: clamp(12px, 2vw, 15px);
+         font-size: clamp(1rem, 2vw, 1.2rem);
+      }
+
+      .skill-list {
+         list-style: none;
+         color: var(--secondary);
+      }
+
+      .skill-list li {
+         margin-bottom: 8px;
+         display: flex;
+         align-items: center;
+         font-size: clamp(0.9rem, 1.8vw, 1rem);
+      }
+
+      .skill-list li::before {
+         content: '▹';
+         color: var(--accent);
+         margin-right: 10px;
+      }
+
+      .links-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+         gap: clamp(12px, 2vw, 20px);
+         padding: 0 clamp(16px, 3vw, 24px);
+      }
+
+      .link-item {
+         background: var(--surface);
+         padding: clamp(16px, 3vw, 20px);
+         border-radius: 4px;
+         text-decoration: none;
+         transition: transform 0.3s ease;
+      }
+
+      .link-item:hover {
+         transform: translateY(-5px);
+      }
+
+      .link-item h3 {
+         color: var(--text);
+         margin-bottom: 5px;
+         font-size: clamp(1rem, 2vw, 1.2rem);
+      }
+
+      .link-item p {
+         color: var(--secondary);
+         font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+      }
+
+      @media (max-width: 768px) {
+         .experience-grid::before {
+            left: 20px;
+         }
+
+         .experience-item {
+            width: auto;
+            margin-left: 50px !important;
+            margin-right: 0 !important;
+         }
+
+         .experience-item::before {
+            left: -40px !important;
+            right: auto !important;
+         }
+
+         .experience-item::after {
+            left: -20px !important;
+            right: auto !important;
+            width: 20px;
+         }
+
+         .section-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+         }
+
+         .section-line {
+            width: 100%;
+         }
+
+         .company-info {
+            word-break: break-word;
+         }
+      }
+
+      @media (max-width: 480px) {
+         .experience-grid {
+            padding: 0 12px;
+         }
+
+         .experience-item {
+            padding: 20px;
+         }
+
+         .skills-grid,
+         .links-grid {
+            padding: 0 12px;
+         }
+      }
+
+      @media (min-width: 2000px) {
+         .content {
+            max-width: 1400px;
+         }
+
+         .experience-grid {
+            max-width: 1200px;
+         }
+
+         html {
+            font-size: 18px;
+         }
       }
    </style>
 </head>
 <body>
-   <div class="main">
-      <div>
-         <img class="circle-image" src="profile-photo.jpg" alt="Profile Photo">
-         <h1>Kyle Ryan</h1>
-         <p class="bio"><em>I am a Software Engineer based in San Francisco, CA focused on the intersection of technology, humanity, and art.</em></p>
-         <h2>Contact</h2>
-         <ul>
-            <li>I respond to most emails: kylrya [at] gmail [dot] com</li>
-         </ul>
+   <div class="container">
+      <header class="header">
+         <div class="intro">
+            <div class="tag">Hi, I'm</div>
+            <h1>Kyle Ryan</h1>
+            <p class="bio">I build scalable systems at the intersection of AI, mobile, and healthcare technology.</p>
+         </div>
+      </header>
+
+      <div class="content">
+         <section class="section">
+            <div class="section-header">
+               <h2 class="section-title">Experience</h2>
+               <div class="section-line"></div>
+            </div>
+            
+            <div class="experience-grid">
+               <div class="experience-item">
+                  <div class="experience-header">
+                     <div class="company-logo">
+                        <img src="https://media.licdn.com/dms/image/v2/C560BAQF3rapep5ytWw/company-logo_200_200/company-logo_200_200/0/1639771992803/usespeak_logo?e=1748476800&v=beta&t=RxCrr91u2H_rkOC2WtGpRMYNAE_v4kyny8BlOWTLTD4" alt="Speak">
+                     </div>
+                     <div class="company-info">
+                        <h3 class="company-name">Speak</h3>
+                        <div class="role">Senior Software Engineer</div>
+                        <div class="duration">Nov 2024 - Present</div>
+                        <div class="location">San Francisco, California</div>
+                     </div>
+                  </div>
+                  <p class="experience-details">
+                     Building AI-powered language learning systems using <code>OpenAI</code>, <code>Python</code>, and modern web technologies. Focused on scalable architecture and ML model deployment.
+                  </p>
+               </div>
+
+               <div class="experience-item">
+                  <div class="experience-header">
+                     <div class="company-logo">
+                        <img src="https://media.licdn.com/dms/image/v2/D4E0BAQEotitY6egehQ/company-logo_200_200/company-logo_200_200/0/1716325866073/twinhealth_logo?e=1748476800&v=beta&t=TOgb7rNcWwRNNPyMD0o8I7gYF7Ytj9mcwm9KKmPuo9E" alt="Twin">
+                     </div>
+                     <div class="company-info">
+                        <h3 class="company-name">Twin Health</h3>
+                        <div class="role">Engineering Lead</div>
+                        <div class="duration">Jan 2024 - Sep 2024</div>
+                        <div class="location">Mountain View, California</div>
+                     </div>
+                  </div>
+                  <p class="experience-details">
+                     Led engineering teams building healthcare applications. Implemented real-time health monitoring systems and ML-powered predictive analytics.
+                  </p>
+               </div>
+
+               <div class="experience-item">
+                  <div class="experience-header">
+                     <div class="company-logo">
+                        <img src="https://media.licdn.com/dms/image/v2/D4E0BAQEotitY6egehQ/company-logo_200_200/company-logo_200_200/0/1716325866073/twinhealth_logo?e=1748476800&v=beta&t=TOgb7rNcWwRNNPyMD0o8I7gYF7Ytj9mcwm9KKmPuo9E" alt="Twin">
+                     </div>
+                     <div class="company-info">
+                        <h3 class="company-name">Twin Health</h3>
+                        <div class="role">Senior Software Engineer, iOS/Mobile</div>
+                        <div class="duration">Jan 2022 - Dec 2023</div>
+                        <div class="location">Mountain View, California</div>
+                     </div>
+                  </div>
+                  <p class="experience-details">
+                     Led mobile development initiatives using <code>Swift</code>, <code>SwiftUI</code>, and <code>Core ML</code>. Built features for corporate wellness customers.
+                  </p>
+               </div>
+
+               <div class="experience-item">
+                  <div class="experience-header">
+                     <div class="company-logo">
+                        <img src="https://media.licdn.com/dms/image/v2/D4E0BAQEotitY6egehQ/company-logo_200_200/company-logo_200_200/0/1716325866073/twinhealth_logo?e=1748476800&v=beta&t=TOgb7rNcWwRNNPyMD0o8I7gYF7Ytj9mcwm9KKmPuo9E" alt="Twin">
+                     </div>
+                     <div class="company-info">
+                        <h3 class="company-name">Twin Health</h3>
+                        <div class="role">Software Engineer II, iOS</div>
+                        <div class="duration">Sep 2020 - Jan 2022</div>
+                        <div class="location">Mountain View, California</div>
+                     </div>
+                  </div>
+                  <p class="experience-details">
+                     Developed iOS applications for health monitoring and predictive analytics.
+                  </p>
+               </div>
+
+               <div class="experience-item">
+                  <div class="experience-header">
+                     <div class="company-logo">
+                        <img src="https://strava.com/favicon.ico" alt="Strava">
+                     </div>
+                     <div class="company-info">
+                        <h3 class="company-name">Strava</h3>
+                        <div class="role">Software Engineer II, iOS</div>
+                        <div class="duration">Jan 2020 - Aug 2020</div>
+                        <div class="location">San Francisco, California</div>
+                     </div>
+                  </div>
+                  <p class="experience-details">
+                     Developed and maintained iOS applications handling millions of daily active users.
+                  </p>
+               </div>
+
+               <div class="experience-item">
+                  <div class="experience-header">
+                     <div class="company-logo">
+                        <img src="https://strava.com/favicon.ico" alt="Strava">
+                     </div>
+                     <div class="company-info">
+                        <h3 class="company-name">Strava</h3>
+                        <div class="role">Software Engineer I, iOS</div>
+                        <div class="duration">Jan 2018 - Dec 2019</div>
+                        <div class="location">San Francisco, California</div>
+                     </div>
+                  </div>
+                  <p class="experience-details">
+                     Implemented performance optimizations and real-time activity tracking using <code>Swift</code>, <code>Core Location</code>, and <code>MapKit</code>.
+                  </p>
+               </div>
+
+               <div class="experience-item">
+                  <div class="experience-header">
+                     <div class="company-logo">
+                        <img src="https://strava.com/favicon.ico" alt="Strava">
+                     </div>
+                     <div class="company-info">
+                        <h3 class="company-name">Strava</h3>
+                        <div class="role">Software Engineering Intern</div>
+                        <div class="duration">Jun 2017 - Aug 2017</div>
+                        <div class="location">San Francisco, California</div>
+                     </div>
+                  </div>
+                  <p class="experience-details">
+                     Contributed to iOS platform development and feature implementation.
+                  </p>
+               </div>
+
+               <div class="experience-item">
+                  <div class="experience-header">
+                     <div class="company-logo">
+                        <img src="https://www.rochester.edu/favicon.ico" alt="University of Rochester">
+                     </div>
+                     <div class="company-info">
+                        <h3 class="company-name">University of Rochester</h3>
+                        <div class="role">Teaching Assistant – iOS Software Development</div>
+                        <div class="duration">Jul 2016 - Dec 2016</div>
+                        <div class="location">Rochester, New York</div>
+                     </div>
+                  </div>
+                  <p class="experience-details">
+                     Assisted in teaching mobile app development using Swift.
+                  </p>
+               </div>
+            </div>
+         </section>
+
+         <section class="section">
+            <div class="section-header">
+               <h2 class="section-title">Skills</h2>
+               <div class="section-line"></div>
+            </div>
+            
+            <div class="skills-grid">
+               <div class="skill-category">
+                  <h3>Languages</h3>
+                  <ul class="skill-list">
+                     <li>Swift</li>
+                     <li>Python</li>
+                     <li>JavaScript/TypeScript</li>
+                     <li>SQL</li>
+                  </ul>
+               </div>
+
+               <div class="skill-category">
+                  <h3>Frameworks</h3>
+                  <ul class="skill-list">
+                     <li>SwiftUI</li>
+                     <li>UIKit</li>
+                     <li>React</li>
+                     <li>Node.js</li>
+                  </ul>
+               </div>
+
+               <div class="skill-category">
+                  <h3>Tools & Platforms</h3>
+                  <ul class="skill-list">
+                     <li>Git</li>
+                     <li>Docker</li>
+                     <li>AWS</li>
+                     <li>CI/CD</li>
+                  </ul>
+               </div>
+
+               <div class="skill-category">
+                  <h3>Focus Areas</h3>
+                  <ul class="skill-list">
+                     <li>Mobile Development</li>
+                     <li>Machine Learning</li>
+                     <li>Distributed Systems</li>
+                     <li>System Architecture</li>
+                  </ul>
+               </div>
+            </div>
+         </section>
+
+         <section class="section">
+            <div class="section-header">
+               <h2 class="section-title">Connect</h2>
+               <div class="section-line"></div>
+            </div>
+            
+            <div class="links-grid">
+               <a href="https://github.com/kylry" class="link-item">
+                  <h3>GitHub</h3>
+                  <p>Open Source Work & Contributions</p>
+               </a>
+               <a href="https://www.linkedin.com/in/kyle-ryan-79b9b7a5/" class="link-item">
+                  <h3>LinkedIn</h3>
+                  <p>Professional Network</p>
+               </a>
+               <a href="https://medium.com/@kylry/the-importance-of-upholding-oo-design-patterns-e0fd2064d192" class="link-item">
+                  <h3>Technical Writing</h3>
+                  <p>Articles on Software Architecture & Engineering</p>
+               </a>
+            </div>
+         </section>
       </div>
-      <section>
-         <h2>Career</h2>
-         <ul>
-            <li>
-               <p><strong><a href="http://speak.com">Speak</a></strong></p>
-               <i>Senior Software Engineer</i> (Oct. 2024 - Present)
-               <p>Backed by OpenAI, Speak is one of the top language learning apps.</p>
-            </li>
-            <li>
-               <p><strong><a href="http://usa.twinhealth.com">Twin</a></strong></p>
-               <i>iOS Engineering Lead</i> (Jan. 2024 - Sept. 2024), <i>Senior Software Engineer</i> (Jan. 2022 - Dec. 2023), <i>Senior Software Engineer</i> (Sep. 2020 - Dec. 2021)
-               <p>Twin is an AI & ML diabetes prevention solution used by top insurance companies like Walmart, Berkshire Hathaway, Blackstone, Blue Cross, and Blue Shield, to drive patient outcomes.</p>
-            </li>
-            <li>
-               <p><strong><a href="http://strava.com">Strava</a></strong></p>
-               <i>Software Engineer II, Software Engineer I, Software Engineer Intern</i> (June 2017 - Sep 2020)
-               <p>Strava is the world's most active social workouts platform used to share over 1 billion activities per year.</p>
-            </li>
-            <li>
-               <p><strong><a href="http://rochester.edu">University of Rochester - Computer Science</a></strong></p>
-               <i>iOS App Programming Teaching Assistant (Sept 2016 - Dec 2017)</i>
-            </li>
-            <li>
-               <p><strong><a href="http://instapaper.com">Instapaper (acquired by Pinterest, now independent)</a></strong></p>
-               <i>iOS Engineering Intern (June 2014 - Aug 2014)</i>
-            </li>
-            <li>
-               <p><strong><a href="http://hackny.org">HackNY</a></strong></p>
-               <i>Undergraduate Fellow (June 2014 - Aug 2014)</i>
-            </li>
-         </ul>
-      </section>
-      <section>
-         <h2>My Apps</h2>
-         <ul>
-            <li>
-               <p><strong><a href="https://itunes.apple.com/us/app/opencare/id1344067100?ls=1&mt=8">OpenCare</a></strong></p>
-               <i>The modern care tracking solution for you & your loved ones. (June 2017 - Present)</i>
-            </li>
-         </ul>
-      </section>
-      <section>
-         <h2>Education</h2>
-         <ul>
-            <li>
-               <p><strong><a href="http://cs.rochester.edu/">University of Rochester - Hajim School of Engineering and Applied Sciences</a></strong></p>
-               <i>Bachelor's Degree in Computer Science and Psychology (Jan 2014 - Dec 2017)</i>
-            </li>
-         </ul>
-      </section>
-      <section>
-         <h2>Links</h2>
-         <ul>
-            <li><a href="https://www.linkedin.com/in/kyle-ryan-79b9b7a5/">LinkedIn</a></li>
-            <li><a href="http://instagram.com/deskofkyle">Instagram</a></li>
-            <li><a href="http://unsplash.com/kylry">Photography</a></li>
-         </ul>
-      </section>
-      <section>
-         <h2>Writing</h2>
-         <ul>
-            <li><a href="https://kylry.svbtle.com/studying-cs">Q and A: Studying Computer Science</a></li>
-            <li><a href="https://medium.com/betadrop-community/betadrop-announcement-5484778d0f25">We’re Building a Way for People to Get Feedback</a></li>
-            <li><a href="https://medium.com/@kylry/the-importance-of-upholding-oo-design-patterns-e0fd2064d192">The Importance of Upholding OO Design Patterns</a></li>
-            <li><a href="https://medium.com/@kylry/let-s-recognize-how-fast-we-re-moving-e3a8d56fbfae">Let’s Recognize How Fast We’re Moving</a></li>
-            <li><a href="https://medium.com/@kylry/english-2-0-language-that-works-more-like-software-ce51d90ee704">English 2.0 — Language that works more like software</a></li>
-            <li><a href="https://medium.com/mile-markers/how-to-build-an-instagram-time-machine-aa0f51ba610">How To Build an Instagram Time Machine</a></li>
-            <li><a href="https://medium.com/@kylry/serendipitous-connectivity-a7d42e32eea9">Serendipitous Connectivity</a></li>
-            <li><a href="https://medium.com/@kylry/germany-high-school-and-a-styrofoam-box-what-i-learned-by-going-to-the-edge-of-space-acdc7056ed2b">Germany, High School and a Styrofoam Box — what I learned by going to the edge of space</a></li>
-            <li><a href="https://medium.com/@kylry/educations-greatest-pitfall-should-be-its-greatest-strength-82c86796c61b">Education’s greatest pitfall should be its greatest strength</a></li>
-         </ul>
-      </section>
-      <section>
-         <h2>Misc</h2>
-         <ul>
-            <li><a href="http://motherfuckingwebsite.com/">Design inspiration for this website. Over-design is rampant in modern technology. This website is pure HTML.</a></li>
-         </ul>
-      </section>
    </div>
-   <script>
-      document.addEventListener('DOMContentLoaded', function () {
-         const circleImage = document.querySelector('.circle-image');
-         circleImage.addEventListener('mousemove', (e) => {
-            const { left, top, width, height } = e.target.getBoundingClientRect();
-            const dx = Math.round(((e.clientX - left) / width - 0.5) * 40);
-            const dy = Math.round(((e.clientY - top) / height - 0.5) * 40);
-            circleImage.style.boxShadow = `${dx}px ${dy}px 15px rgba(0, 0, 0, 0.3)`;
-         });
-         circleImage.addEventListener('mouseleave', () => {
-            circleImage.style.boxShadow = '0px 0px 15px rgba(0, 0, 0, 0.3)';
-         });
-      });
-   </script>
 </body>
 </html>
