@@ -5,137 +5,171 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Post - Kyle Ryan</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', monospace;
+            font-family: 'JetBrains Mono', 'SF Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
             line-height: 1.6;
             max-width: 900px;
             margin: 0 auto;
             padding: 40px 20px;
-            color: #00ff00;
-            background: #0d1117;
+            color: #e1e8ed;
+            background: #0a0e14;
             font-size: 14px;
-        }
-        
-        h1 {
-            font-size: 2.2em;
-            margin-bottom: 0.2em;
-            color: #00ff00;
-            font-weight: 700;
-            text-shadow: 0 0 10px #00ff0040;
-        }
-        
-        h2 {
-            font-size: 1.6em;
-            margin-top: 2em;
-            margin-bottom: 1em;
-            color: #00d4ff;
-            border-left: 4px solid #00d4ff;
-            padding-left: 10px;
-        }
-        
-        h3 {
-            font-size: 1.3em;
-            margin-top: 1.5em;
-            margin-bottom: 0.8em;
-            color: #ffd700;
-        }
-        
-        a {
-            color: #58a6ff;
-            text-decoration: none;
-            border-bottom: 1px dotted #58a6ff40;
-        }
-        
-        a:hover {
-            color: #00ff00;
-            text-shadow: 0 0 5px #00ff0060;
-            border-bottom: 1px solid #00ff00;
+            min-height: 100vh;
         }
         
         .nav {
             margin-bottom: 2em;
+            padding: 1em;
+            background: #0f1419;
+            border: 1px solid #1e2328;
+            border-radius: 6px;
         }
         
         .nav a {
-            margin-right: 1em;
+            color: #39bae6;
+            text-decoration: none;
+            margin-right: 1.5em;
+            font-size: 0.9em;
+            transition: color 0.2s ease;
+        }
+        
+        .nav a:hover {
+            color: #ff6b35;
         }
         
         .post-header {
             margin-bottom: 2em;
-            padding: 1.5em;
-            border: 2px solid #00ff00;
-            border-radius: 6px;
-            background: #161b22;
-            box-shadow: 0 0 20px #00ff0020;
+            padding: 2em;
+            border: 1px solid #1e2328;
+            border-left: 4px solid #ff6b35;
+            border-radius: 8px;
+            background: #0f1419;
         }
         
         .post-title {
             font-size: 2.2em;
             margin-bottom: 0.3em;
-            color: #00ff00;
+            color: #ff6b35;
             display: none; /* Hide duplicate title - content will show the markdown h1 */
         }
         
         .post-date {
-            color: #7d8590;
+            color: #7c8794;
             font-size: 0.9em;
-            font-family: 'SF Mono', monospace;
+            font-family: inherit;
+        }
+        
+        .author-info {
+            margin-top: 1em;
+            padding-top: 1em;
+            border-top: 1px solid #1e2328;
+            color: #7c8794;
+            font-size: 0.9em;
+        }
+        
+        .author-info strong {
+            color: #ff6b35;
         }
         
         .post-content {
             margin-bottom: 2em;
             padding: 2em;
-            background: #161b22;
-            border: 1px solid #30363d;
+            background: #0f1419;
+            border: 1px solid #1e2328;
             border-radius: 8px;
-            box-shadow: inset 0 0 10px #00000040;
+        }
+        
+        .post-content h1 {
+            font-size: 2.2em;
+            margin-bottom: 0.5em;
+            color: #ff6b35;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            border-bottom: 2px solid #1e2328;
+            padding-bottom: 0.5em;
+        }
+        
+        .post-content h2 {
+            font-size: 1.6em;
+            margin-top: 2.5em;
+            margin-bottom: 1em;
+            color: #39bae6;
+            border-left: 3px solid #ff6b35;
+            padding-left: 15px;
+        }
+        
+        .post-content h3 {
+            font-size: 1.3em;
+            margin-top: 1.8em;
+            margin-bottom: 0.8em;
+            color: #f29e74;
         }
         
         .post-content p {
             margin-bottom: 1.2em;
-            color: #c9d1d9;
+            color: #bfc7d5;
         }
         
         .post-content ul, .post-content ol {
             margin-bottom: 1.2em;
             padding-left: 2em;
-            color: #c9d1d9;
+            color: #bfc7d5;
         }
         
         .post-content li {
             margin-bottom: 0.5em;
         }
         
+        .post-content strong {
+            color: #ff6b35;
+        }
+        
+        a {
+            color: #39bae6;
+            text-decoration: none;
+            border-bottom: 1px dotted #39bae640;
+            transition: all 0.2s ease;
+        }
+        
+        a:hover {
+            color: #ff6b35;
+            border-bottom: 1px solid #ff6b35;
+        }
+        
         .post-content blockquote {
-            border-left: 4px solid #58a6ff;
-            padding-left: 1.5em;
-            margin: 1.5em 0;
-            color: #7d8590;
-            font-style: italic;
-            background: #0d1117;
+            border-left: 4px solid #39bae6;
             padding: 1em 1em 1em 2em;
+            margin: 1.5em 0;
+            color: #7c8794;
+            font-style: italic;
+            background: #0a0e14;
             border-radius: 4px;
         }
         
         .post-content code {
-            background: #21262d;
-            color: #ffd700;
+            background: #1e2328;
+            color: #f29e74;
             padding: 3px 6px;
             border-radius: 4px;
-            font-family: 'SF Mono', 'Monaco', 'Menlo', monospace;
-            border: 1px solid #30363d;
+            font-family: inherit;
+            border: 1px solid #2d343b;
             font-size: 0.9em;
         }
         
         .post-content pre {
-            background: #0d1117;
-            color: #c9d1d9;
+            background: #0a0e14;
+            color: #bfc7d5;
             padding: 1.5em;
             border-radius: 6px;
             overflow-x: auto;
             margin: 1.5em 0;
-            border: 1px solid #30363d;
-            box-shadow: inset 0 0 10px #00000060;
+            border: 1px solid #1e2328;
         }
         
         .post-content pre code {
@@ -145,257 +179,70 @@
             color: inherit;
         }
         
-        /* Image styling */
         .post-content img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
             margin: 1.5em 0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border: 1px solid #1e2328;
         }
         
-        /* Engineering theme colors */
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #64748b;
-            --accent-color: #0ea5e9;
-            --success-color: #059669;
-            --warning-color: #d97706;
-            --error-color: #dc2626;
-            --background-light: #f8fafc;
-            --border-color: #e2e8f0;
-        }
-        
-        /* Engineering-themed styling */
-        body {
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-        }
-        
-        .post-header {
-            background: white;
-            padding: 2em;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-            border-left: 4px solid var(--primary-color);
-        }
-        
-        .post-content {
-            background: white;
-            padding: 2em;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-        }
-        
-        /* Terminal-style table for engineering reports */
         .post-content table {
             width: 100%;
             border-collapse: collapse;
             margin: 1.5em 0;
-            background: #0d1117;
-            border: 1px solid #30363d;
+            background: #0a0e14;
+            border: 1px solid #1e2328;
             border-radius: 6px;
             overflow: hidden;
-            box-shadow: 0 0 20px #00000040;
-            font-family: 'SF Mono', monospace;
+            font-family: inherit;
         }
         
         .post-content th,
         .post-content td {
             padding: 12px 16px;
             text-align: left;
-            border-bottom: 1px solid #21262d;
-            color: #c9d1d9;
+            border-bottom: 1px solid #1e2328;
+            color: #bfc7d5;
         }
         
         .post-content th {
-            background: #21262d;
+            background: #1e2328;
             font-weight: 600;
-            color: #00ff00;
+            color: #ff6b35;
             text-transform: uppercase;
             font-size: 0.8em;
             letter-spacing: 0.1em;
-            border-bottom: 2px solid #00ff00;
+            border-bottom: 2px solid #ff6b35;
         }
         
         .post-content tr:hover {
-            background: #161b22;
+            background: #0f1419;
         }
         
-        /* Grade highlighting with terminal colors */
         .post-content td:nth-child(2) {
             font-weight: 700;
-            font-family: 'SF Mono', monospace;
-            color: #ffd700;
-            text-shadow: 0 0 5px #ffd70040;
+            color: #f29e74;
         }
         
-        /* Code blocks with engineering theme */
-        .post-content pre {
-            background: #1e293b;
-            color: #e2e8f0;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent-color);
-        }
-        
-        .post-content code {
-            background: var(--background-light);
-            color: var(--primary-color);
-            border: 1px solid var(--border-color);
-        }
-        
-        /* Section headers */
-        .post-content h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 0.5em;
-            margin-top: 2.5em;
-        }
-        
-        .post-content h3 {
-            color: var(--secondary-color);
-            position: relative;
-        }
-        
-        .post-content h3:before {
-            content: "▶";
-            color: var(--accent-color);
-            margin-right: 0.5em;
-            font-size: 0.8em;
-        }
-        
-        /* Emphasis styling */
-        .post-content strong {
-            color: var(--primary-color);
-        }
-        
-        /* Lists */
-        .post-content li {
-            position: relative;
-        }
-        
-        .post-content ul li:before {
-            content: "●";
-            color: var(--accent-color);
-            font-weight: bold;
-            position: absolute;
-            left: -1.2em;
-        }
-        
-        /* Terminal-style navigation */
-        .nav {
-            background: #161b22;
-            padding: 1em 1.5em;
-            border-radius: 6px;
-            border: 1px solid #30363d;
-            margin-bottom: 2em;
-            font-family: 'SF Mono', monospace;
-        }
-        
-        .nav a {
-            color: #58a6ff;
-            font-weight: 500;
-            transition: all 0.2s;
-            font-size: 0.9em;
-        }
-        
-        .nav a:hover {
-            color: #00ff00;
-            text-shadow: 0 0 8px #00ff0060;
-        }
-        
-        .social-share {
-            background: #161b22;
-            padding: 2em;
-            border-radius: 8px;
-            margin-top: 2em;
-            border: 1px solid #30363d;
-            box-shadow: 0 0 20px #00000040;
-        }
-        
-        .social-share h3 {
-            margin-top: 0;
-            margin-bottom: 1em;
-            color: #00ff00;
-            font-family: 'SF Mono', monospace;
-            font-size: 1.1em;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-        
-        .share-buttons {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-        
-        .share-btn {
-            padding: 10px 16px;
-            border: 1px solid #30363d;
-            border-radius: 4px;
-            cursor: pointer;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 500;
-            font-family: 'SF Mono', monospace;
-            transition: all 0.2s;
-            background: #21262d;
-            color: #c9d1d9;
-        }
-        
-        .share-btn:hover {
-            background: #30363d;
-            color: #00ff00;
-            text-shadow: 0 0 5px #00ff0060;
-            border-color: #00ff00;
-        }
-        
-        .share-twitter:hover {
-            color: #58a6ff;
-            border-color: #58a6ff;
-        }
-        
-        .share-linkedin:hover {
-            color: #0077b5;
-            border-color: #0077b5;
-        }
-        
-        .share-facebook:hover {
-            color: #4267b2;
-            border-color: #4267b2;
-        }
-        
-        .share-email:hover {
-            color: #ffd700;
-            border-color: #ffd700;
-        }
-        
-        .loading {
-            text-align: center;
-            color: #7d8590;
-            font-style: italic;
-        }
-        
-        /* Terminal-style heart button */
         .heart-section {
             text-align: center;
             margin: 2em 0;
             padding: 1.5em;
-            background: #161b22;
-            border: 1px solid #30363d;
+            background: #0f1419;
+            border: 1px solid #1e2328;
             border-radius: 6px;
-            font-family: 'SF Mono', monospace;
         }
         
         .heart-btn {
-            background: #21262d;
-            border: 2px solid #30363d;
+            background: #1e2328;
+            border: 2px solid #2d343b;
             border-radius: 6px;
             padding: 12px 20px;
             cursor: pointer;
             transition: all 0.3s ease;
-            font-family: 'SF Mono', monospace;
             font-size: 16px;
-            color: #c9d1d9;
+            color: #bfc7d5;
             display: inline-flex;
             align-items: center;
             gap: 8px;
@@ -403,7 +250,7 @@
         
         .heart-btn:hover {
             border-color: #ff6b6b;
-            background: #30363d;
+            background: #2d343b;
             transform: scale(1.05);
         }
         
@@ -415,7 +262,6 @@
         
         .heart-btn.liked .heart-icon {
             color: #ff6b6b;
-            text-shadow: 0 0 10px #ff6b6b60;
         }
         
         .heart-icon {
@@ -430,14 +276,90 @@
         }
         
         .heart-label {
-            color: #7d8590;
+            color: #7c8794;
             font-size: 14px;
             margin-left: 10px;
-            font-family: 'SF Mono', monospace;
         }
         
         .heart-btn:active {
             transform: scale(0.95);
+        }
+        
+        .social-share {
+            background: #0f1419;
+            padding: 2em;
+            border-radius: 8px;
+            margin-top: 2em;
+            border: 1px solid #1e2328;
+        }
+        
+        .social-share h3 {
+            margin-top: 0;
+            margin-bottom: 1em;
+            color: #ff6b35;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        
+        .share-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .share-btn {
+            padding: 10px 16px;
+            border: 1px solid #1e2328;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.2s;
+            background: #1e2328;
+            color: #bfc7d5;
+        }
+        
+        .share-btn:hover {
+            background: #2d343b;
+            color: #ff6b35;
+            border-color: #ff6b35;
+        }
+        
+        .share-twitter:hover {
+            color: #39bae6;
+            border-color: #39bae6;
+        }
+        
+        .share-linkedin:hover {
+            color: #0077b5;
+            border-color: #0077b5;
+        }
+        
+        .share-facebook:hover {
+            color: #4267b2;
+            border-color: #4267b2;
+        }
+        
+        .share-email:hover {
+            color: #f29e74;
+            border-color: #f29e74;
+        }
+        
+        .loading {
+            text-align: center;
+            color: #7c8794;
+            font-style: italic;
+        }
+        
+        .footer {
+            margin-top: 3em;
+            padding-top: 2em;
+            border-top: 1px solid #1e2328;
+            text-align: center;
+            color: #5c6773;
+            font-size: 0.8em;
         }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -451,6 +373,9 @@
     <div class="post-header">
         <h1 class="post-title" id="post-title">Loading...</h1>
         <div class="post-date" id="post-date">Loading...</div>
+        <div class="author-info">
+            Written by <strong>Kyle Ryan</strong> • iOS Engineer
+        </div>
     </div>
     
     <div class="post-content" id="post-content">
@@ -473,6 +398,10 @@
             <a href="#" class="share-btn share-facebook" id="share-facebook">Share on Facebook</a>
             <a href="#" class="share-btn share-email" id="share-email">Share via Email</a>
         </div>
+    </div>
+    
+    <div class="footer">
+        <p>© 2025 Kyle Ryan. All rights reserved.</p>
     </div>
     
     <script>
