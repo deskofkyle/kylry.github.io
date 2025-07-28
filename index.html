@@ -70,6 +70,40 @@
             color: #666;
             font-size: 0.9em;
         }
+        
+        .featured-article {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 24px;
+            border-radius: 12px;
+            margin: 2em 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .featured-article h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+        
+        .featured-article p {
+            margin: 0 0 16px 0;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+        
+        .featured-article a {
+            color: white;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            transition: border-bottom-color 0.2s ease;
+        }
+        
+        .featured-article a:hover {
+            border-bottom-color: white;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -78,12 +112,18 @@
     
     <p>I am a Software Engineer based in San Francisco, CA focused on the intersection of technology, humanity, and art.</p>
     
+    <div class="featured-article">
+        <h3>Latest Article</h3>
+        <p>How do I grade AI tools as an iOS Engineer in July 2025 - My analysis of AI performance across the entire iOS development pipeline, from PRD to App Store distribution.</p>
+        <a href="blog/posts/ios-development-pipeline-ai-analysis.html">Read the full analysis →</a>
+    </div>
+    
     <h2>Experience</h2>
     <ul>
         <li>
             <span class="job-title">Senior Software Engineer</span> at <span class="company"><a href="https://speak.com">Speak</a></span>
             <span class="duration">(Oct 2024 - Present)</span>
-            <br>Backed by OpenAI, Speak is one of the top language learning apps.
+            <br>Backed by OpenAI, Speak is building a layer for learning anything.
         </li>
         <li>
             <span class="job-title">iOS Engineering Lead</span> at <span class="company"><a href="https://twinhealth.com">Twin</a></span>
@@ -110,7 +150,7 @@
     <h2>Education</h2>
     <ul>
         <li>
-            <span class="job-title">Bachelor's Degree in Computer Science</span> with Minor in Psychology
+            <span class="job-title">Bachelor's Degree</span> - Double Major in Computer Science and Psychology
             <br><span class="company"><a href="https://hajim.rochester.edu">University of Rochester - Hajim School of Engineering and Applied Sciences</a></span>
             <span class="duration">(Jan 2014 - Dec 2017)</span>
         </li>
@@ -128,11 +168,14 @@
         </li>
     </ul>
     
+    <h2>Blog</h2>
+    <p>I occasionally write about technology, humanity, and art. Check out my <a href="blog/index.html">blog</a> for my latest thoughts and insights.</p>
+    
     <div class="contact-info">
         <h2>Contact</h2>
         <p><strong>Email:</strong> kylrya [at] gmail [dot] com</p>
         <p><strong>Location:</strong> San Francisco, CA</p>
-        <p><strong>Links:</strong> <a href="https://www.linkedin.com/in/kyleryan/">LinkedIn</a> | <a href="https://www.instagram.com/deskofkyle/">Instagram</a> | <a href="https://unsplash.com/@deskofkyle">Photography</a></p>
+        <p><strong>Links:</strong> <a href="https://www.linkedin.com/in/kyleryan/">LinkedIn</a> | <a href="https://www.instagram.com/deskofkyle/">Instagram</a> | <a href="https://unsplash.com/@deskofkyle">Photography</a> | <a href="blog/index.html">Blog</a></p>
         <p><em>I respond to most emails and am always interested in connecting with fellow engineers and creatives.</em></p>
     </div>
 </body>
