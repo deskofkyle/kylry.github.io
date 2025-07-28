@@ -6,42 +6,50 @@
     <title>Blog Post - Kyle Ryan</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', monospace;
             line-height: 1.6;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 40px 20px;
-            color: #333;
-            background: #fff;
+            color: #00ff00;
+            background: #0d1117;
+            font-size: 14px;
         }
         
         h1 {
-            font-size: 2.5em;
+            font-size: 2.2em;
             margin-bottom: 0.2em;
-            color: #000;
+            color: #00ff00;
+            font-weight: 700;
+            text-shadow: 0 0 10px #00ff0040;
         }
         
         h2 {
-            font-size: 1.8em;
+            font-size: 1.6em;
             margin-top: 2em;
             margin-bottom: 1em;
-            color: #000;
+            color: #00d4ff;
+            border-left: 4px solid #00d4ff;
+            padding-left: 10px;
         }
         
         h3 {
-            font-size: 1.4em;
+            font-size: 1.3em;
             margin-top: 1.5em;
             margin-bottom: 0.8em;
-            color: #000;
+            color: #ffd700;
         }
         
         a {
-            color: #0066cc;
+            color: #58a6ff;
             text-decoration: none;
+            border-bottom: 1px dotted #58a6ff40;
         }
         
         a:hover {
-            text-decoration: underline;
+            color: #00ff00;
+            text-shadow: 0 0 5px #00ff0060;
+            border-bottom: 1px solid #00ff00;
         }
         
         .nav {
@@ -54,33 +62,44 @@
         
         .post-header {
             margin-bottom: 2em;
-            padding-bottom: 1em;
-            border-bottom: 1px solid #eee;
+            padding: 1.5em;
+            border: 2px solid #00ff00;
+            border-radius: 6px;
+            background: #161b22;
+            box-shadow: 0 0 20px #00ff0020;
         }
         
         .post-title {
-            font-size: 2.5em;
+            font-size: 2.2em;
             margin-bottom: 0.3em;
-            color: #000;
+            color: #00ff00;
             display: none; /* Hide duplicate title - content will show the markdown h1 */
         }
         
         .post-date {
-            color: #666;
-            font-size: 1em;
+            color: #7d8590;
+            font-size: 0.9em;
+            font-family: 'SF Mono', monospace;
         }
         
         .post-content {
             margin-bottom: 2em;
+            padding: 2em;
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            box-shadow: inset 0 0 10px #00000040;
         }
         
         .post-content p {
             margin-bottom: 1.2em;
+            color: #c9d1d9;
         }
         
         .post-content ul, .post-content ol {
             margin-bottom: 1.2em;
             padding-left: 2em;
+            color: #c9d1d9;
         }
         
         .post-content li {
@@ -88,31 +107,42 @@
         }
         
         .post-content blockquote {
-            border-left: 4px solid #0066cc;
+            border-left: 4px solid #58a6ff;
             padding-left: 1.5em;
             margin: 1.5em 0;
-            color: #555;
+            color: #7d8590;
             font-style: italic;
+            background: #0d1117;
+            padding: 1em 1em 1em 2em;
+            border-radius: 4px;
         }
         
         .post-content code {
-            background: #f5f5f5;
-            padding: 2px 4px;
-            border-radius: 3px;
-            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            background: #21262d;
+            color: #ffd700;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: 'SF Mono', 'Monaco', 'Menlo', monospace;
+            border: 1px solid #30363d;
+            font-size: 0.9em;
         }
         
         .post-content pre {
-            background: #f5f5f5;
-            padding: 1em;
-            border-radius: 5px;
+            background: #0d1117;
+            color: #c9d1d9;
+            padding: 1.5em;
+            border-radius: 6px;
             overflow-x: auto;
             margin: 1.5em 0;
+            border: 1px solid #30363d;
+            box-shadow: inset 0 0 10px #00000060;
         }
         
         .post-content pre code {
             background: none;
             padding: 0;
+            border: none;
+            color: inherit;
         }
         
         /* Image styling */
@@ -156,41 +186,47 @@
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
         }
         
-        /* Table styling for engineering reports */
+        /* Terminal-style table for engineering reports */
         .post-content table {
             width: 100%;
             border-collapse: collapse;
             margin: 1.5em 0;
-            background: white;
-            border-radius: 8px;
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 6px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px #00000040;
+            font-family: 'SF Mono', monospace;
         }
         
         .post-content th,
         .post-content td {
             padding: 12px 16px;
             text-align: left;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid #21262d;
+            color: #c9d1d9;
         }
         
         .post-content th {
-            background: var(--background-light);
+            background: #21262d;
             font-weight: 600;
-            color: var(--secondary-color);
+            color: #00ff00;
             text-transform: uppercase;
-            font-size: 0.875em;
-            letter-spacing: 0.05em;
+            font-size: 0.8em;
+            letter-spacing: 0.1em;
+            border-bottom: 2px solid #00ff00;
         }
         
         .post-content tr:hover {
-            background: #f8fafc;
+            background: #161b22;
         }
         
-        /* Grade highlighting */
+        /* Grade highlighting with terminal colors */
         .post-content td:nth-child(2) {
-            font-weight: 600;
-            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-weight: 700;
+            font-family: 'SF Mono', monospace;
+            color: #ffd700;
+            text-shadow: 0 0 5px #ffd70040;
         }
         
         /* Code blocks with engineering theme */
@@ -245,83 +281,163 @@
             left: -1.2em;
         }
         
-        /* Navigation styling */
+        /* Terminal-style navigation */
         .nav {
-            background: white;
+            background: #161b22;
             padding: 1em 1.5em;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border-radius: 6px;
+            border: 1px solid #30363d;
+            margin-bottom: 2em;
+            font-family: 'SF Mono', monospace;
         }
         
         .nav a {
-            color: var(--primary-color);
+            color: #58a6ff;
             font-weight: 500;
-            transition: color 0.2s;
+            transition: all 0.2s;
+            font-size: 0.9em;
         }
         
         .nav a:hover {
-            color: var(--accent-color);
+            color: #00ff00;
+            text-shadow: 0 0 8px #00ff0060;
         }
         
         .social-share {
-            background: white;
+            background: #161b22;
             padding: 2em;
-            border-radius: 12px;
+            border-radius: 8px;
             margin-top: 2em;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-            border-top: 3px solid var(--accent-color);
+            border: 1px solid #30363d;
+            box-shadow: 0 0 20px #00000040;
         }
         
         .social-share h3 {
             margin-top: 0;
             margin-bottom: 1em;
+            color: #00ff00;
+            font-family: 'SF Mono', monospace;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
         }
         
         .share-buttons {
             display: flex;
-            gap: 10px;
+            gap: 12px;
             flex-wrap: wrap;
         }
         
         .share-btn {
-            padding: 8px 16px;
-            border: none;
-            border-radius: 5px;
+            padding: 10px 16px;
+            border: 1px solid #30363d;
+            border-radius: 4px;
             cursor: pointer;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
-            transition: opacity 0.2s;
+            font-family: 'SF Mono', monospace;
+            transition: all 0.2s;
+            background: #21262d;
+            color: #c9d1d9;
         }
         
         .share-btn:hover {
-            opacity: 0.8;
+            background: #30363d;
+            color: #00ff00;
+            text-shadow: 0 0 5px #00ff0060;
+            border-color: #00ff00;
         }
         
-        .share-twitter {
-            background: #1da1f2;
-            color: white;
+        .share-twitter:hover {
+            color: #58a6ff;
+            border-color: #58a6ff;
         }
         
-        .share-linkedin {
-            background: #0077b5;
-            color: white;
+        .share-linkedin:hover {
+            color: #0077b5;
+            border-color: #0077b5;
         }
         
-        .share-facebook {
-            background: #4267b2;
-            color: white;
+        .share-facebook:hover {
+            color: #4267b2;
+            border-color: #4267b2;
         }
         
-        .share-email {
-            background: #666;
-            color: white;
+        .share-email:hover {
+            color: #ffd700;
+            border-color: #ffd700;
         }
         
         .loading {
             text-align: center;
-            color: #666;
+            color: #7d8590;
             font-style: italic;
+        }
+        
+        /* Terminal-style heart button */
+        .heart-section {
+            text-align: center;
+            margin: 2em 0;
+            padding: 1.5em;
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            font-family: 'SF Mono', monospace;
+        }
+        
+        .heart-btn {
+            background: #21262d;
+            border: 2px solid #30363d;
+            border-radius: 6px;
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'SF Mono', monospace;
+            font-size: 16px;
+            color: #c9d1d9;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .heart-btn:hover {
+            border-color: #ff6b6b;
+            background: #30363d;
+            transform: scale(1.05);
+        }
+        
+        .heart-btn.liked {
+            border-color: #ff6b6b;
+            background: #ff6b6b20;
+            color: #ff6b6b;
+        }
+        
+        .heart-btn.liked .heart-icon {
+            color: #ff6b6b;
+            text-shadow: 0 0 10px #ff6b6b60;
+        }
+        
+        .heart-icon {
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+        
+        .heart-count {
+            font-weight: 600;
+            min-width: 20px;
+            text-align: left;
+        }
+        
+        .heart-label {
+            color: #7d8590;
+            font-size: 14px;
+            margin-left: 10px;
+            font-family: 'SF Mono', monospace;
+        }
+        
+        .heart-btn:active {
+            transform: scale(0.95);
         }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -339,6 +455,14 @@
     
     <div class="post-content" id="post-content">
         <div class="loading">Loading post content...</div>
+    </div>
+    
+    <div class="heart-section">
+        <button class="heart-btn" id="heart-btn">
+            <span class="heart-icon" id="heart-icon">♡</span>
+            <span class="heart-count" id="heart-count">0</span>
+        </button>
+        <span class="heart-label">likes</span>
     </div>
     
     <div class="social-share">
@@ -423,8 +547,100 @@
             });
         }
         
+        // Heart button functionality via Vercel API
+        let heartButton, heartIcon, heartCount;
+        let currentPostId = '';
+        let userHasLiked = false;
+        
+        async function initHeartButton() {
+            heartButton = document.getElementById('heart-btn');
+            heartIcon = document.getElementById('heart-icon');
+            heartCount = document.getElementById('heart-count');
+            
+            if (!heartButton) return;
+            
+            const urlParams = new URLSearchParams(window.location.search);
+            currentPostId = urlParams.get('post') || 'default';
+            
+            // Load heart count and user state
+            await loadHeartData();
+            
+            // Add click handler
+            heartButton.addEventListener('click', handleHeartClick);
+        }
+        
+        async function loadHeartData() {
+            try {
+                // Check if user has liked this post (localStorage)
+                userHasLiked = localStorage.getItem(`liked_${currentPostId}`) === 'true';
+                
+                // Get current heart count from Vercel API
+                const response = await fetch(`/api/hearts?postId=${encodeURIComponent(currentPostId)}`);
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    const count = data.count || 0;
+                    updateHeartUI(count, userHasLiked);
+                } else {
+                    updateHeartUI(0, false);
+                }
+            } catch (error) {
+                console.log('Heart data load failed, using fallback');
+                updateHeartUI(0, false);
+            }
+        }
+        
+        async function handleHeartClick() {
+            if (userHasLiked) return; // Prevent multiple likes
+            
+            try {
+                // Increment heart count via Vercel API
+                const response = await fetch('/api/hearts', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ postId: currentPostId })
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    
+                    // Mark user as having liked
+                    userHasLiked = true;
+                    localStorage.setItem(`liked_${currentPostId}`, 'true');
+                    
+                    // Update UI
+                    updateHeartUI(data.count, true);
+                } else {
+                    console.log('Heart update failed');
+                }
+            } catch (error) {
+                console.log('Heart update failed:', error);
+            }
+        }
+        
+        function updateHeartUI(count, liked) {
+            if (!heartCount || !heartIcon || !heartButton) return;
+            
+            heartCount.textContent = count;
+            
+            if (liked) {
+                heartIcon.textContent = '♥';
+                heartButton.classList.add('liked');
+                heartButton.style.cursor = 'default';
+            } else {
+                heartIcon.textContent = '♡';
+                heartButton.classList.remove('liked');
+                heartButton.style.cursor = 'pointer';
+            }
+        }
+        
         // Load post when page loads
-        document.addEventListener('DOMContentLoaded', loadPost);
+        document.addEventListener('DOMContentLoaded', () => {
+            loadPost();
+            initHeartButton();
+        });
     </script>
 </body>
 </html>

@@ -1,5 +1,13 @@
 # How do I grade AI tools as an iOS Engineer in July 2025
 
+**By Kyle Ryan** | *July 28, 2025*
+
+<div style="margin: 15px 0; padding: 10px; background: #161b22; border: 1px solid #30363d; border-radius: 4px; font-family: 'SF Mono', monospace; font-size: 12px;">
+  <a href="https://twitter.com/intent/tweet?text=How%20do%20I%20grade%20AI%20tools%20as%20an%20iOS%20Engineer%20in%20July%202025&url=" target="_blank" style="color: #58a6ff; text-decoration: none; margin-right: 15px;">$ tweet</a>
+  <a href="https://www.linkedin.com/sharing/share-offsite/?url=" target="_blank" style="color: #58a6ff; text-decoration: none; margin-right: 15px;">$ share</a>
+  <a href="mailto:?subject=How%20do%20I%20grade%20AI%20tools%20as%20an%20iOS%20Engineer%20in%20July%202025&body=Check%20out%20this%20blog%20post:" target="_blank" style="color: #58a6ff; text-decoration: none;">$ email</a>
+</div>
+
 ![Desktop computer on wooden desk](https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80)
 *Photo by [Christopher Gower](https://unsplash.com/@cgower) on [Unsplash](https://unsplash.com/photos/a-desktop-computer-sitting-on-top-of-a-wooden-desk-PoL7eR-p4Z0)*
 
