@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Kyle Ryan</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #333;
+            background: #fff;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.2em;
+            color: #000;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 2em;
+        }
+        
+        h2 {
+            font-size: 1.5em;
+            margin-top: 2em;
+            margin-bottom: 1em;
+            color: #000;
+        }
+        
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .nav {
+            margin-bottom: 2em;
+        }
+        
+        .nav a {
+            margin-right: 1em;
+        }
+        
+        .post-list {
+            margin-bottom: 2em;
+        }
+        
+        .post-item {
+            margin-bottom: 1.5em;
+            padding-bottom: 1.5em;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .post-item:last-child {
+            border-bottom: none;
+        }
+        
+        .post-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 0.3em;
+        }
+        
+        .post-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 0.5em;
+        }
+        
+        .post-excerpt {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="../index.html">← Back to Home</a>
+    </div>
+    
+    <h1>Blog</h1>
+    <p class="subtitle">Thoughts on technology, humanity, and art</p>
+    
+    <div class="post-list" id="posts">
+        <!-- Posts will be loaded here -->
+    </div>
+    
+    <script>
+        // Blog posts data - add your posts here
+        const posts = [
+            {
+                title: "Welcome to My Blog",
+                date: "2024-01-01",
+                excerpt: "This is the beginning of my blog where I'll share thoughts on technology, humanity, and art.",
+                filename: "welcome-to-my-blog.md"
+            }
+        ];
+        
+        // Load posts
+        function loadPosts() {
+            const postsContainer = document.getElementById('posts');
+            
+            posts.forEach(post => {
+                const postItem = document.createElement('div');
+                postItem.className = 'post-item';
+                postItem.innerHTML = `
+                    <div class="post-title">
+                        <a href="post.html?post=${post.filename}">${post.title}</a>
+                    </div>
+                    <div class="post-date">${formatDate(post.date)}</div>
+                    <div class="post-excerpt">${post.excerpt}</div>
+                `;
+                postsContainer.appendChild(postItem);
+            });
+        }
+        
+        function formatDate(dateStr) {
+            const date = new Date(dateStr);
+            return date.toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+        }
+        
+        // Load posts when page loads
+        document.addEventListener('DOMContentLoaded', loadPosts);
+    </script>
+</body>
+</html>

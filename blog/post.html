@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post - Kyle Ryan</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #333;
+            background: #fff;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.2em;
+            color: #000;
+        }
+        
+        h2 {
+            font-size: 1.8em;
+            margin-top: 2em;
+            margin-bottom: 1em;
+            color: #000;
+        }
+        
+        h3 {
+            font-size: 1.4em;
+            margin-top: 1.5em;
+            margin-bottom: 0.8em;
+            color: #000;
+        }
+        
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .nav {
+            margin-bottom: 2em;
+        }
+        
+        .nav a {
+            margin-right: 1em;
+        }
+        
+        .post-header {
+            margin-bottom: 2em;
+            padding-bottom: 1em;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .post-title {
+            font-size: 2.5em;
+            margin-bottom: 0.3em;
+            color: #000;
+        }
+        
+        .post-date {
+            color: #666;
+            font-size: 1em;
+        }
+        
+        .post-content {
+            margin-bottom: 2em;
+        }
+        
+        .post-content p {
+            margin-bottom: 1.2em;
+        }
+        
+        .post-content ul, .post-content ol {
+            margin-bottom: 1.2em;
+            padding-left: 2em;
+        }
+        
+        .post-content li {
+            margin-bottom: 0.5em;
+        }
+        
+        .post-content blockquote {
+            border-left: 4px solid #0066cc;
+            padding-left: 1.5em;
+            margin: 1.5em 0;
+            color: #555;
+            font-style: italic;
+        }
+        
+        .post-content code {
+            background: #f5f5f5;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+        }
+        
+        .post-content pre {
+            background: #f5f5f5;
+            padding: 1em;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1.5em 0;
+        }
+        
+        .post-content pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        .social-share {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 2em;
+        }
+        
+        .social-share h3 {
+            margin-top: 0;
+            margin-bottom: 1em;
+        }
+        
+        .share-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .share-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+        
+        .share-btn:hover {
+            opacity: 0.8;
+        }
+        
+        .share-twitter {
+            background: #1da1f2;
+            color: white;
+        }
+        
+        .share-linkedin {
+            background: #0077b5;
+            color: white;
+        }
+        
+        .share-facebook {
+            background: #4267b2;
+            color: white;
+        }
+        
+        .share-email {
+            background: #666;
+            color: white;
+        }
+        
+        .loading {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">← Back to Blog</a>
+        <a href="../index.html">Home</a>
+    </div>
+    
+    <div class="post-header">
+        <h1 class="post-title" id="post-title">Loading...</h1>
+        <div class="post-date" id="post-date">Loading...</div>
+    </div>
+    
+    <div class="post-content" id="post-content">
+        <div class="loading">Loading post content...</div>
+    </div>
+    
+    <div class="social-share">
+        <h3>Share this post</h3>
+        <div class="share-buttons">
+            <a href="#" class="share-btn share-twitter" id="share-twitter">Share on Twitter</a>
+            <a href="#" class="share-btn share-linkedin" id="share-linkedin">Share on LinkedIn</a>
+            <a href="#" class="share-btn share-facebook" id="share-facebook">Share on Facebook</a>
+            <a href="#" class="share-btn share-email" id="share-email">Share via Email</a>
+        </div>
+    </div>
+    
+    <script>
+        // Get the post parameter from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const postFilename = urlParams.get('post');
+        
+        // Post metadata
+        const postMeta = {
+            'welcome-to-my-blog.md': {
+                title: 'Welcome to My Blog',
+                date: '2024-01-01'
+            }
+        };
+        
+        async function loadPost() {
+            if (!postFilename) {
+                document.getElementById('post-content').innerHTML = '<p>No post specified.</p>';
+                return;
+            }
+            
+            try {
+                const response = await fetch(`posts/${postFilename}`);
+                if (!response.ok) {
+                    throw new Error('Post not found');
+                }
+                
+                const markdown = await response.text();
+                const html = marked.parse(markdown);
+                
+                // Update content
+                document.getElementById('post-content').innerHTML = html;
+                
+                // Update metadata
+                const meta = postMeta[postFilename];
+                if (meta) {
+                    document.getElementById('post-title').textContent = meta.title;
+                    document.getElementById('post-date').textContent = formatDate(meta.date);
+                    document.title = `${meta.title} - Kyle Ryan`;
+                }
+                
+                // Setup social sharing
+                setupSocialSharing(meta);
+                
+            } catch (error) {
+                console.error('Error loading post:', error);
+                document.getElementById('post-content').innerHTML = '<p>Error loading post. Please try again later.</p>';
+            }
+        }
+        
+        function setupSocialSharing(meta) {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent(meta?.title || 'Blog Post');
+            const text = encodeURIComponent(`Check out this blog post: ${meta?.title || 'Blog Post'}`);
+            
+            document.getElementById('share-twitter').href = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+            document.getElementById('share-linkedin').href = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+            document.getElementById('share-facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+            document.getElementById('share-email').href = `mailto:?subject=${title}&body=${text}%20${url}`;
+        }
+        
+        function formatDate(dateStr) {
+            const date = new Date(dateStr);
+            return date.toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+        }
+        
+        // Load post when page loads
+        document.addEventListener('DOMContentLoaded', loadPost);
+    </script>
+</body>
+</html>
