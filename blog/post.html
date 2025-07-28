@@ -62,6 +62,7 @@
             font-size: 2.5em;
             margin-bottom: 0.3em;
             color: #000;
+            display: none; /* Hide duplicate title - content will show the markdown h1 */
         }
         
         .post-date {
@@ -114,11 +115,161 @@
             padding: 0;
         }
         
-        .social-share {
-            background: #f8f9fa;
-            padding: 20px;
+        /* Image styling */
+        .post-content img {
+            max-width: 100%;
+            height: auto;
             border-radius: 8px;
+            margin: 1.5em 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Engineering theme colors */
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #64748b;
+            --accent-color: #0ea5e9;
+            --success-color: #059669;
+            --warning-color: #d97706;
+            --error-color: #dc2626;
+            --background-light: #f8fafc;
+            --border-color: #e2e8f0;
+        }
+        
+        /* Engineering-themed styling */
+        body {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+        
+        .post-header {
+            background: white;
+            padding: 2em;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .post-content {
+            background: white;
+            padding: 2em;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+        
+        /* Table styling for engineering reports */
+        .post-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5em 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .post-content th,
+        .post-content td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .post-content th {
+            background: var(--background-light);
+            font-weight: 600;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            font-size: 0.875em;
+            letter-spacing: 0.05em;
+        }
+        
+        .post-content tr:hover {
+            background: #f8fafc;
+        }
+        
+        /* Grade highlighting */
+        .post-content td:nth-child(2) {
+            font-weight: 600;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+        }
+        
+        /* Code blocks with engineering theme */
+        .post-content pre {
+            background: #1e293b;
+            color: #e2e8f0;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .post-content code {
+            background: var(--background-light);
+            color: var(--primary-color);
+            border: 1px solid var(--border-color);
+        }
+        
+        /* Section headers */
+        .post-content h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5em;
+            margin-top: 2.5em;
+        }
+        
+        .post-content h3 {
+            color: var(--secondary-color);
+            position: relative;
+        }
+        
+        .post-content h3:before {
+            content: "▶";
+            color: var(--accent-color);
+            margin-right: 0.5em;
+            font-size: 0.8em;
+        }
+        
+        /* Emphasis styling */
+        .post-content strong {
+            color: var(--primary-color);
+        }
+        
+        /* Lists */
+        .post-content li {
+            position: relative;
+        }
+        
+        .post-content ul li:before {
+            content: "●";
+            color: var(--accent-color);
+            font-weight: bold;
+            position: absolute;
+            left: -1.2em;
+        }
+        
+        /* Navigation styling */
+        .nav {
+            background: white;
+            padding: 1em 1.5em;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+        
+        .nav a {
+            color: var(--primary-color);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .nav a:hover {
+            color: var(--accent-color);
+        }
+        
+        .social-share {
+            background: white;
+            padding: 2em;
+            border-radius: 12px;
             margin-top: 2em;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            border-top: 3px solid var(--accent-color);
         }
         
         .social-share h3 {

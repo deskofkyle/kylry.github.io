@@ -1,6 +1,6 @@
 # How do I grade AI tools as an iOS Engineer in July 2025
 
-![Desktop computer on wooden desk](https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80)
+![Desktop computer on wooden desk](https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80)
 *Photo by [Christopher Gower](https://unsplash.com/@cgower) on [Unsplash](https://unsplash.com/photos/a-desktop-computer-sitting-on-top-of-a-wooden-desk-PoL7eR-p4Z0)*
 
 AI tools make big promises to revolutionize coding, but my day-to-day reality is more nuanced. Every developer seems to have strong opinions about AI - either it's amazing or useless. Here are my grades based on real iOS development work.
