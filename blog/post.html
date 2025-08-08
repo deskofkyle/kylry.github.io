@@ -12,114 +12,117 @@
         }
         
         body {
-            font-family: 'JetBrains Mono', 'SF Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
-            line-height: 1.6;
-            max-width: 900px;
+            font-family: 'Charter', 'Georgia', 'Times New Roman', serif;
+            line-height: 1.58;
+            max-width: 680px;
             margin: 0 auto;
-            padding: 40px 20px;
-            color: #e1e8ed;
-            background: #0a0e14;
-            font-size: 14px;
+            padding: 60px 20px;
+            color: #1a1a1a;
+            background: #ffffff;
+            font-size: 18px;
             min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         
         .nav {
             margin-bottom: 2em;
-            padding: 1em;
-            background: #0f1419;
-            border: 1px solid #1e2328;
-            border-radius: 6px;
+            padding: 1em 0;
+            border-bottom: 1px solid #f2f2f2;
         }
         
         .nav a {
-            color: #39bae6;
-            text-decoration: none;
+            color: #1a1a1a;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 2px;
             margin-right: 1.5em;
             font-size: 0.9em;
             transition: color 0.2s ease;
         }
         
         .nav a:hover {
-            color: #ff6b35;
+            color: #0066cc;
         }
         
         .post-header {
-            margin-bottom: 2em;
-            padding: 2em;
-            border: 1px solid #1e2328;
-            border-left: 4px solid #ff6b35;
-            border-radius: 8px;
-            background: #0f1419;
+            margin-bottom: 3em;
+            padding: 0 0 2em 0;
+            border-bottom: 1px solid #e6e6e6;
         }
         
         .post-title {
-            font-size: 2.2em;
+            font-size: 2.5em;
             margin-bottom: 0.3em;
-            color: #ff6b35;
+            color: #1a1a1a;
+            font-weight: 400;
+            line-height: 1.2;
             display: none; /* Hide duplicate title - content will show the markdown h1 */
         }
         
         .post-date {
-            color: #7c8794;
+            color: #6b6b6b;
             font-size: 0.9em;
             font-family: inherit;
+            font-weight: 300;
         }
         
         .author-info {
             margin-top: 1em;
             padding-top: 1em;
-            border-top: 1px solid #1e2328;
-            color: #7c8794;
+            border-top: 1px solid #f2f2f2;
+            color: #6b6b6b;
             font-size: 0.9em;
         }
         
         .author-info strong {
-            color: #ff6b35;
+            color: #1a1a1a;
+            font-weight: 500;
         }
         
         .post-content {
-            margin-bottom: 2em;
-            padding: 2em;
-            background: #0f1419;
-            border: 1px solid #1e2328;
-            border-radius: 8px;
+            margin-bottom: 3em;
+            padding: 0;
         }
         
         .post-content h1 {
             font-size: 2.2em;
-            margin-bottom: 0.5em;
-            color: #ff6b35;
-            font-weight: 700;
+            margin-bottom: 1em;
+            color: #1a1a1a;
+            font-weight: 400;
             letter-spacing: -0.02em;
-            border-bottom: 2px solid #1e2328;
+            border-bottom: 1px solid #e6e6e6;
             padding-bottom: 0.5em;
+            line-height: 1.2;
         }
         
         .post-content h2 {
             font-size: 1.6em;
             margin-top: 2.5em;
             margin-bottom: 1em;
-            color: #39bae6;
-            border-left: 3px solid #ff6b35;
-            padding-left: 15px;
+            color: #1a1a1a;
+            font-weight: 400;
+            line-height: 1.3;
         }
         
         .post-content h3 {
             font-size: 1.3em;
             margin-top: 1.8em;
             margin-bottom: 0.8em;
-            color: #f29e74;
+            color: #1a1a1a;
+            font-weight: 400;
         }
         
         .post-content p {
-            margin-bottom: 1.2em;
-            color: #bfc7d5;
+            margin-bottom: 1.5em;
+            color: #4a4a4a;
+            line-height: 1.6;
         }
         
         .post-content ul, .post-content ol {
-            margin-bottom: 1.2em;
-            padding-left: 2em;
-            color: #bfc7d5;
+            margin-bottom: 1.5em;
+            padding-left: 1.5em;
+            color: #4a4a4a;
         }
         
         .post-content li {
@@ -127,55 +130,54 @@
         }
         
         .post-content strong {
-            color: #ff6b35;
+            color: #1a1a1a;
+            font-weight: 600;
         }
         
         a {
-            color: #39bae6;
-            text-decoration: none;
-            border-bottom: 1px dotted #39bae640;
-            transition: all 0.2s ease;
+            color: #1a1a1a;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 2px;
+            transition: color 0.2s ease;
         }
         
         a:hover {
-            color: #ff6b35;
-            border-bottom: 1px solid #ff6b35;
+            color: #0066cc;
         }
         
         .post-content blockquote {
-            border-left: 4px solid #39bae6;
+            border-left: 4px solid #e6e6e6;
             padding: 1em 1em 1em 2em;
             margin: 1.5em 0;
-            color: #7c8794;
+            color: #6b6b6b;
             font-style: italic;
-            background: #0a0e14;
+            background: #f9f9f9;
             border-radius: 4px;
         }
         
         .post-content code {
-            background: #1e2328;
-            color: #f29e74;
+            background: #f5f5f5;
+            color: #d73a49;
             padding: 3px 6px;
             border-radius: 4px;
-            font-family: inherit;
-            border: 1px solid #2d343b;
-            font-size: 0.9em;
+            font-family: 'SF Mono', 'Monaco', 'Cascadia Code', monospace;
+            font-size: 0.85em;
         }
         
         .post-content pre {
-            background: #0a0e14;
-            color: #bfc7d5;
+            background: #f5f5f5;
+            color: #1a1a1a;
             padding: 1.5em;
             border-radius: 6px;
             overflow-x: auto;
             margin: 1.5em 0;
-            border: 1px solid #1e2328;
+            border: 1px solid #e6e6e6;
         }
         
         .post-content pre code {
             background: none;
             padding: 0;
-            border: none;
             color: inherit;
         }
         
@@ -184,15 +186,15 @@
             height: auto;
             border-radius: 8px;
             margin: 1.5em 0;
-            border: 1px solid #1e2328;
+            border: 1px solid #e6e6e6;
         }
         
         .post-content table {
             width: 100%;
             border-collapse: collapse;
             margin: 1.5em 0;
-            background: #0a0e14;
-            border: 1px solid #1e2328;
+            background: #ffffff;
+            border: 1px solid #e6e6e6;
             border-radius: 6px;
             overflow: hidden;
             font-family: inherit;
@@ -202,47 +204,45 @@
         .post-content td {
             padding: 12px 16px;
             text-align: left;
-            border-bottom: 1px solid #1e2328;
-            color: #bfc7d5;
+            border-bottom: 1px solid #e6e6e6;
+            color: #4a4a4a;
         }
         
         .post-content th {
-            background: #1e2328;
+            background: #f9f9f9;
             font-weight: 600;
-            color: #ff6b35;
-            text-transform: uppercase;
-            font-size: 0.8em;
-            letter-spacing: 0.1em;
-            border-bottom: 2px solid #ff6b35;
+            color: #1a1a1a;
+            font-size: 0.85em;
+            border-bottom: 2px solid #e6e6e6;
         }
         
         .post-content tr:hover {
-            background: #0f1419;
+            background: #f9f9f9;
         }
         
         .post-content td:nth-child(2) {
-            font-weight: 700;
-            color: #f29e74;
+            font-weight: 600;
+            color: #1a1a1a;
         }
         
         .heart-section {
             text-align: center;
-            margin: 2em 0;
+            margin: 3em 0;
             padding: 1.5em;
-            background: #0f1419;
-            border: 1px solid #1e2328;
+            background: #f9f9f9;
+            border: 1px solid #e6e6e6;
             border-radius: 6px;
         }
         
         .heart-btn {
-            background: #1e2328;
-            border: 2px solid #2d343b;
+            background: #ffffff;
+            border: 2px solid #e6e6e6;
             border-radius: 6px;
             padding: 12px 20px;
             cursor: pointer;
             transition: all 0.3s ease;
             font-size: 16px;
-            color: #bfc7d5;
+            color: #4a4a4a;
             display: inline-flex;
             align-items: center;
             gap: 8px;
@@ -250,13 +250,13 @@
         
         .heart-btn:hover {
             border-color: #ff6b6b;
-            background: #2d343b;
+            background: #fff5f5;
             transform: scale(1.05);
         }
         
         .heart-btn.liked {
             border-color: #ff6b6b;
-            background: #ff6b6b20;
+            background: #fff5f5;
             color: #ff6b6b;
         }
         
@@ -276,7 +276,7 @@
         }
         
         .heart-label {
-            color: #7c8794;
+            color: #6b6b6b;
             font-size: 14px;
             margin-left: 10px;
         }
@@ -286,20 +286,19 @@
         }
         
         .social-share {
-            background: #0f1419;
+            background: #f9f9f9;
             padding: 2em;
             border-radius: 8px;
-            margin-top: 2em;
-            border: 1px solid #1e2328;
+            margin-top: 3em;
+            border: 1px solid #e6e6e6;
         }
         
         .social-share h3 {
             margin-top: 0;
             margin-bottom: 1em;
-            color: #ff6b35;
+            color: #1a1a1a;
             font-size: 1.1em;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
+            font-weight: 500;
         }
         
         .share-buttons {
@@ -310,26 +309,25 @@
         
         .share-btn {
             padding: 10px 16px;
-            border: 1px solid #1e2328;
+            border: 1px solid #e6e6e6;
             border-radius: 4px;
             cursor: pointer;
             text-decoration: none;
             font-size: 13px;
             font-weight: 500;
             transition: all 0.2s;
-            background: #1e2328;
-            color: #bfc7d5;
+            background: #ffffff;
+            color: #4a4a4a;
         }
         
         .share-btn:hover {
-            background: #2d343b;
-            color: #ff6b35;
-            border-color: #ff6b35;
+            background: #f0f0f0;
+            color: #1a1a1a;
         }
         
         .share-twitter:hover {
-            color: #39bae6;
-            border-color: #39bae6;
+            color: #1da1f2;
+            border-color: #1da1f2;
         }
         
         .share-linkedin:hover {
@@ -343,22 +341,22 @@
         }
         
         .share-email:hover {
-            color: #f29e74;
-            border-color: #f29e74;
+            color: #0066cc;
+            border-color: #0066cc;
         }
         
         .loading {
             text-align: center;
-            color: #7c8794;
+            color: #6b6b6b;
             font-style: italic;
         }
         
         .footer {
-            margin-top: 3em;
+            margin-top: 4em;
             padding-top: 2em;
-            border-top: 1px solid #1e2328;
+            border-top: 1px solid #e6e6e6;
             text-align: center;
-            color: #5c6773;
+            color: #6b6b6b;
             font-size: 0.8em;
         }
     </style>
