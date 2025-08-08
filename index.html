@@ -16,7 +16,7 @@
             line-height: 1.58;
             max-width: 680px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 40px 20px;
             color: #1a1a1a;
             background: #ffffff;
             font-size: 18px;
@@ -37,15 +37,15 @@
         .subtitle {
             font-size: 1.1em;
             color: #6b6b6b;
-            margin-bottom: 3em;
+            margin-bottom: 2em;
             font-style: normal;
             font-weight: 300;
         }
         
         h2 {
             font-size: 1.8em;
-            margin-top: 3em;
-            margin-bottom: 1.2em;
+            margin-top: 2em;
+            margin-bottom: 1em;
             color: #1a1a1a;
             font-weight: 400;
             line-height: 1.2;
@@ -57,8 +57,8 @@
         }
         
         li {
-            margin-bottom: 1.5em;
-            padding: 1.5em 0;
+            margin-bottom: 1em;
+            padding: 1em 0;
             border-bottom: 1px solid #f2f2f2;
             list-style: none;
         }
@@ -81,9 +81,9 @@
         
         .contact-info {
             background: #f9f9f9;
-            padding: 2.5em;
+            padding: 2em;
             border-radius: 4px;
-            margin-top: 3em;
+            margin-top: 2em;
             border: 1px solid #e6e6e6;
         }
         
@@ -161,34 +161,101 @@
             font-style: italic;
         }
         
-        .company-logo {
-            width: 20px;
-            height: 20px;
-            margin-right: 8px;
-            vertical-align: middle;
+        .experience-section {
+            margin: 2em 0;
+        }
+        
+        .experience-container {
+            position: relative;
+            overflow: hidden;
+            margin: 1em 0;
+        }
+        
+        .experience-scroll {
+            display: flex;
+            gap: 1em;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding-bottom: 10px;
+            scrollbar-width: thin;
+        }
+        
+        .experience-scroll::-webkit-scrollbar {
+            height: 6px;
+        }
+        
+        .experience-scroll::-webkit-scrollbar-track {
+            background: #f0f0f0;
             border-radius: 3px;
         }
         
-        .experience-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
+        .experience-scroll::-webkit-scrollbar-thumb {
+            background: #c0c0c0;
+            border-radius: 3px;
         }
         
-        .experience-content {
-            flex: 1;
+        .experience-card {
+            flex: 0 0 280px;
+            background: #ffffff;
+            border: 1px solid #e6e6e6;
+            border-radius: 8px;
+            padding: 1.5em;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .experience-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .company-logo {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 0.8em;
+            border-radius: 4px;
+        }
+        
+        .job-title {
+            font-weight: 600;
+            color: #1a1a1a;
+            font-size: 1.1em;
+            margin-bottom: 0.3em;
+        }
+        
+        .company {
+            font-style: normal;
+            margin-bottom: 0.5em;
+        }
+        
+        .company a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        .company a:hover {
+            text-decoration: underline;
+        }
+        
+        .duration {
+            color: #6b6b6b;
+            font-size: 0.85em;
+            font-weight: 300;
+            margin-bottom: 0.8em;
+        }
+        
+        .job-description {
+            font-size: 0.9em;
+            color: #4a4a4a;
+            line-height: 1.5;
         }
         
         .blog-section {
-            background: #f9f9f9;
-            padding: 2.5em;
-            border-radius: 4px;
-            margin: 3em 0;
-            border: 1px solid #e6e6e6;
+            margin: 2em 0;
         }
         
         .blog-section h3 {
-            margin: 0 0 1.5em 0;
+            margin: 0 0 1em 0;
             font-size: 1.4em;
             font-weight: 600;
             color: #1a1a1a;
@@ -197,8 +264,8 @@
         
         .blog-posts-container {
             display: flex;
-            gap: 1.5em;
-            margin-bottom: 1.5em;
+            gap: 1em;
+            margin-bottom: 1em;
             flex-wrap: wrap;
         }
         
@@ -285,59 +352,55 @@
         <a href="blog/index.html" class="view-all-link">View all articles →</a>
     </div>
     
-    <h2>Experience</h2>
-    <ul>
-        <li>
-            <div class="experience-item">
-                <img src="https://www.google.com/s2/favicons?domain=speak.com&sz=32" alt="Speak logo" class="company-logo">
-                <div class="experience-content">
-                    <span class="job-title">Senior Software Engineer</span> at <span class="company"><a href="https://speak.com">Speak</a></span>
-                    <span class="duration">(Oct 2024 - Present)</span>
-                    <br>Backed by OpenAI, Speak is building a layer for learning anything.
+    <div class="experience-section">
+        <h2>Experience</h2>
+        <div class="experience-container">
+            <div class="experience-scroll">
+                <div class="experience-card">
+                    <img src="https://www.google.com/s2/favicons?domain=speak.com&sz=32" alt="Speak logo" class="company-logo">
+                    <div class="job-title">Senior Software Engineer</div>
+                    <div class="company"><a href="https://speak.com">Speak</a></div>
+                    <div class="duration">Oct 2024 - Present</div>
+                    <div class="job-description">Backed by OpenAI, Speak is building a layer for learning anything.</div>
+                </div>
+                <div class="experience-card">
+                    <img src="https://www.google.com/s2/favicons?domain=twinhealth.com&sz=32" alt="Twin logo" class="company-logo">
+                    <div class="job-title">iOS Engineering Lead</div>
+                    <div class="company"><a href="https://twinhealth.com">Twin Health</a></div>
+                    <div class="duration">Jan 2024 - Sept 2024</div>
+                    <div class="job-description">Twin is an AI & ML diabetes prevention solution used by top insurance companies.</div>
+                </div>
+                <div class="experience-card">
+                    <img src="https://www.google.com/s2/favicons?domain=twinhealth.com&sz=32" alt="Twin logo" class="company-logo">
+                    <div class="job-title">Senior Software Engineer</div>
+                    <div class="company"><a href="https://twinhealth.com">Twin Health</a></div>
+                    <div class="duration">Jan 2022 - Dec 2023</div>
+                    <div class="job-description">Twin is an AI & ML diabetes prevention solution used by top insurance companies.</div>
+                </div>
+                <div class="experience-card">
+                    <img src="https://www.google.com/s2/favicons?domain=strava.com&sz=32" alt="Strava logo" class="company-logo">
+                    <div class="job-title">Software Engineer II, I, Intern</div>
+                    <div class="company"><a href="https://strava.com">Strava</a></div>
+                    <div class="duration">June 2017 - Sep 2020</div>
+                    <div class="job-description">Strava is the world's most active social workouts platform used to share over 1 billion activities per year.</div>
+                </div>
+                <div class="experience-card">
+                    <img src="https://www.google.com/s2/favicons?domain=rochester.edu&sz=32" alt="University of Rochester logo" class="company-logo">
+                    <div class="job-title">iOS App Programming TA</div>
+                    <div class="company"><a href="https://rochester.edu">University of Rochester</a></div>
+                    <div class="duration">Sept 2016 - Dec 2017</div>
+                    <div class="job-description">Teaching Assistant for iOS app development course.</div>
+                </div>
+                <div class="experience-card">
+                    <img src="https://www.google.com/s2/favicons?domain=instapaper.com&sz=32" alt="Instapaper logo" class="company-logo">
+                    <div class="job-title">iOS Engineering Intern</div>
+                    <div class="company"><a href="https://instapaper.com">Instapaper</a></div>
+                    <div class="duration">June 2014 - Aug 2014</div>
+                    <div class="job-description">iOS development internship at the popular read-later service.</div>
                 </div>
             </div>
-        </li>
-        <li>
-            <div class="experience-item">
-                <img src="https://www.google.com/s2/favicons?domain=twinhealth.com&sz=32" alt="Twin logo" class="company-logo">
-                <div class="experience-content">
-                    <span class="job-title">iOS Engineering Lead</span> at <span class="company"><a href="https://twinhealth.com">Twin</a></span>
-                    <span class="duration">(Jan 2024 - Sept 2024)</span>
-                    <br><span class="job-title">Senior Software Engineer</span> at <span class="company"><a href="https://twinhealth.com">Twin</a></span>
-                    <span class="duration">(Jan 2022 - Dec 2023)</span>
-                    <br>Twin is an AI & ML diabetes prevention solution used by top insurance companies.
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="experience-item">
-                <img src="https://www.google.com/s2/favicons?domain=strava.com&sz=32" alt="Strava logo" class="company-logo">
-                <div class="experience-content">
-                    <span class="job-title">Software Engineer II, I, Intern</span> at <span class="company"><a href="https://strava.com">Strava</a></span>
-                    <span class="duration">(June 2017 - Sep 2020)</span>
-                    <br>Strava is the world's most active social workouts platform used to share over 1 billion activities per year.
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="experience-item">
-                <img src="https://www.google.com/s2/favicons?domain=rochester.edu&sz=32" alt="University of Rochester logo" class="company-logo">
-                <div class="experience-content">
-                    <span class="job-title">iOS App Programming Teaching Assistant</span> at <span class="company"><a href="https://rochester.edu">University of Rochester</a></span>
-                    <span class="duration">(Sept 2016 - Dec 2017)</span>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="experience-item">
-                <img src="https://www.google.com/s2/favicons?domain=instapaper.com&sz=32" alt="Instapaper logo" class="company-logo">
-                <div class="experience-content">
-                    <span class="job-title">iOS Engineering Intern</span> at <span class="company"><a href="https://instapaper.com">Instapaper</a></span>
-                    <span class="duration">(June 2014 - Aug 2014)</span>
-                </div>
-            </div>
-        </li>
-    </ul>
+        </div>
+    </div>
     
     <h2>Education</h2>
     <ul>
