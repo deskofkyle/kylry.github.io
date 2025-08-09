@@ -171,24 +171,12 @@
             margin: 1em 0;
         }
         
-        .timeline-line {
-            position: absolute;
-            top: 60px;
-            left: 20px;
-            right: 20px;
-            height: 2px;
-            background: linear-gradient(to right, #e6e6e6 0%, #0066cc 50%, #e6e6e6 100%);
-            z-index: 1;
-        }
-        
         .experience-scroll {
             display: flex;
             gap: 1em;
             overflow-x: auto;
             scroll-behavior: smooth;
             padding-bottom: 10px;
-            position: relative;
-            z-index: 2;
             scrollbar-width: thin;
         }
         
@@ -221,24 +209,9 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         
-        .experience-card::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #0066cc;
-            border: 3px solid #ffffff;
-            box-shadow: 0 0 0 2px #0066cc;
-            z-index: 3;
-        }
-        
-        .experience-card:first-child::before {
-            background: #28a745;
-            box-shadow: 0 0 0 2px #28a745;
+        .experience-card:first-child {
+            border: 2px solid #0066cc;
+            border-radius: 8px;
         }
         
         .company-logo {
@@ -387,7 +360,6 @@
     <div class="experience-section">
         <h2>Experience</h2>
         <div class="experience-container">
-            <div class="timeline-line"></div>
             <div class="experience-scroll">
                 <div class="experience-card">
                     <img src="https://www.google.com/s2/favicons?domain=speak.com&sz=32" alt="Speak logo" class="company-logo">
