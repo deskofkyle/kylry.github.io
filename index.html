@@ -171,12 +171,24 @@
             margin: 1em 0;
         }
         
+        .timeline-line {
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            right: 20px;
+            height: 2px;
+            background: linear-gradient(to right, #e6e6e6 0%, #0066cc 50%, #e6e6e6 100%);
+            z-index: 1;
+        }
+        
         .experience-scroll {
             display: flex;
             gap: 1em;
             overflow-x: auto;
             scroll-behavior: smooth;
             padding-bottom: 10px;
+            position: relative;
+            z-index: 2;
             scrollbar-width: thin;
         }
         
@@ -207,6 +219,26 @@
         .experience-card:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .experience-card::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #0066cc;
+            border: 3px solid #ffffff;
+            box-shadow: 0 0 0 2px #0066cc;
+            z-index: 3;
+        }
+        
+        .experience-card:first-child::before {
+            background: #28a745;
+            box-shadow: 0 0 0 2px #28a745;
         }
         
         .company-logo {
@@ -355,6 +387,7 @@
     <div class="experience-section">
         <h2>Experience</h2>
         <div class="experience-container">
+            <div class="timeline-line"></div>
             <div class="experience-scroll">
                 <div class="experience-card">
                     <img src="https://www.google.com/s2/favicons?domain=speak.com&sz=32" alt="Speak logo" class="company-logo">
@@ -368,28 +401,42 @@
                     <div class="job-title">iOS Engineering Lead</div>
                     <div class="company"><a href="https://twinhealth.com">Twin Health</a></div>
                     <div class="duration">Jan 2024 - Sept 2024</div>
-                    <div class="job-description">Twin is an AI & ML diabetes prevention solution used by top insurance companies.</div>
+                    <div class="job-description">Led iOS engineering team for AI-powered diabetes prevention platform.</div>
                 </div>
                 <div class="experience-card">
                     <img src="https://www.google.com/s2/favicons?domain=twinhealth.com&sz=32" alt="Twin logo" class="company-logo">
                     <div class="job-title">Senior Software Engineer</div>
                     <div class="company"><a href="https://twinhealth.com">Twin Health</a></div>
                     <div class="duration">Jan 2022 - Dec 2023</div>
-                    <div class="job-description">Twin is an AI & ML diabetes prevention solution used by top insurance companies.</div>
+                    <div class="job-description">Built core iOS features for diabetes prevention solution used by major insurance companies.</div>
                 </div>
                 <div class="experience-card">
                     <img src="https://www.google.com/s2/favicons?domain=strava.com&sz=32" alt="Strava logo" class="company-logo">
-                    <div class="job-title">Software Engineer II, I, Intern</div>
+                    <div class="job-title">Software Engineer II</div>
                     <div class="company"><a href="https://strava.com">Strava</a></div>
-                    <div class="duration">June 2017 - Sep 2020</div>
-                    <div class="job-description">Strava is the world's most active social workouts platform used to share over 1 billion activities per year.</div>
+                    <div class="duration">Jan 2020 - Sep 2020</div>
+                    <div class="job-description">Senior iOS engineer working on features for 100M+ athlete community.</div>
+                </div>
+                <div class="experience-card">
+                    <img src="https://www.google.com/s2/favicons?domain=strava.com&sz=32" alt="Strava logo" class="company-logo">
+                    <div class="job-title">Software Engineer I</div>
+                    <div class="company"><a href="https://strava.com">Strava</a></div>
+                    <div class="duration">June 2018 - Dec 2019</div>
+                    <div class="job-description">iOS development for the world's leading social fitness platform.</div>
+                </div>
+                <div class="experience-card">
+                    <img src="https://www.google.com/s2/favicons?domain=strava.com&sz=32" alt="Strava logo" class="company-logo">
+                    <div class="job-title">Software Engineer Intern</div>
+                    <div class="company"><a href="https://strava.com">Strava</a></div>
+                    <div class="duration">June 2017 - May 2018</div>
+                    <div class="job-description">Full-stack intern contributing to iOS and web platforms.</div>
                 </div>
                 <div class="experience-card">
                     <img src="https://www.google.com/s2/favicons?domain=rochester.edu&sz=32" alt="University of Rochester logo" class="company-logo">
                     <div class="job-title">iOS App Programming TA</div>
                     <div class="company"><a href="https://rochester.edu">University of Rochester</a></div>
                     <div class="duration">Sept 2016 - Dec 2017</div>
-                    <div class="job-description">Teaching Assistant for iOS app development course.</div>
+                    <div class="job-description">Teaching Assistant for mobile app development course.</div>
                 </div>
                 <div class="experience-card">
                     <img src="https://www.google.com/s2/favicons?domain=instapaper.com&sz=32" alt="Instapaper logo" class="company-logo">
