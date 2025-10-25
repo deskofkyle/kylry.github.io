@@ -1,6 +1,11 @@
-# Welcome to My Blog
+# The Mantienance Multiplier: How Mantienance Could Become Your Overlooked Superpower 
 
-Welcome to my personal blog! I'm excited to share my thoughts and experiences with you.
+My hands were covered in grease in the first hour of repairs for my aging, rusting e-bike. By the second hour, I was smart enough to find some gloves to prevent my hands from being covered in black grease for the rest of the week. This ritual is new for me. I usually hand-off my bike mantienance to an experienced bike shop. In the worst case scenario, I have even sold bikes if they become a money pit of mantienance. 
+
+Lately, I have been reflecting on the role of "mantienance culture" – not just in the bike realm – but also in society, my job as a software engineer, and in my hobbies. 
+
+
+
 
 ## What to Expect
 
